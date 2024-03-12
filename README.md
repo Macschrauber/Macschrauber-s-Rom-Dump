@@ -1,3 +1,7 @@
+I needed to encrypt the disk image as Gatekeeper flaggs it for containing Flashrom.
+The password is rom.
+
+
 If you encounter an error regarding an unknown developer when attempting to open the Dumper, macOS displays a message stating: 'macOS cannot verify the developer of.'
 
 To allow the system to open the Dumper, perform a Ctrl-click on it and select <open>.
