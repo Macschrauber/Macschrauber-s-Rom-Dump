@@ -7,7 +7,6 @@ A tool for dumping and flashing the firmware of a Mac Pro 4.1 / 5.1 combined wit
 
 example output of a rom dump, version 10-3-2024
 
-[CODE]
 
 $ test_nvram 1.bin 
 ===================================================
@@ -55,7 +54,6 @@ VSS2 is empty (ok after recent full nvram reset or after flashing a rebuilt firm
 VSS1 (Formatted) (Healthy), found 45 variables (29 valid, 16 deleted)
 VSS2 (Formatted) (Healthy)
 
-[/CODE]
 
 
 
