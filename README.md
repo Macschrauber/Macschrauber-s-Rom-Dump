@@ -47,6 +47,7 @@ for running RomDump Macschrauber csrutil enable --without kext is enough
 ———————————————————————————————————————————————
 
 Special thanks to:
+
 	•	tsialex for investigating the Mac bootrom and sharing the information.
  
 	•	Syncretic for scanvss.
