@@ -3,8 +3,9 @@ What is it?
 A tool for dumping and flashing the firmware of a Mac Pro 4.1 / 5.1 combined with an analyser of the NVRAM content and the firmware validity.
 
 Also it can dummp and analyse firmwares from the most Macs from around 2006 to 2017.
-    
-  
+
+
+
 example output of a rom dump by the cli tool, version 10-3-2024
 
 \$test_nvram 1.bin  
