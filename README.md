@@ -6,49 +6,49 @@ example output of a rom dump, version 10-3-2024
 
 $ test_nvram 1.bin 
 ===================================================
-test_nvram_shell_script 12-Mar-2024 by Macschrauber
-scanning: 1.bin
-
-nvram.vol position: 0x120000, size: 0x30000, header size: 0x48
-vss1_position: 00120048: 2456 5353       $VSS
-vss2_position: 00130048: 2456 5353       $VSS
-fsys_position: 00148000: 4673 7973       Fsys
-gaid_position: 00148800: 4761 6964       Gaid
-0x120048 first stream start position ok, stored in /tmp/VSS_Store1.bin, length: 0x0000ffb8
-0x130048 second stream start position ok, stored in /tmp/VSS_Store2.bin, length: 0x0000ffb8
-0x148000 Fsys start position ok, header: 080000 000008
-0x148800 Gaid start position ok, header: 080000 000018
-Firmware 144.0.0.0.0 (latest) built on Fri Apr 12 12:43:00 2019
-Bios Version: MP51.88Z.F000.B00.1904121248
-MP41, Serial from firmware: 3Txxxxxxxxxxx
-Macserial reported the serial number seems to be possibly valid
-MP41 backplane made in 2009
-LBSN: J59xxxxxx1LTC   BD: 0904xx0904xx   LBSN sector of MP51
-hwc: 9MD   son: 625-9217
-CRC32 checksums: ok
-Bootblock version: AAPLEFI1.88Z.0005.I00.1904121247
-Bootblock of 144.0.0.0.0 (rebuilt firmware)
-Base_18 hardware descriptor
-Fsys | Gaid headers: 080000 000008 | 080000 000018
-Fsys: 0 override-version, 1 overrides, 2 ssn, 3 hwc, 4 son, 5 EOF (ok)
-fmm-computer-name: xxx Mac Pro
-BootOrder: 1:Boot0080
-Boot0080: Mac OS X PciRoot(0x0)/Pci(0x3,0x0)/Pci(0x0,0x0)/SasEx(0x01000000,0x00253856,0xDF5F,0xB181,0,0,0)/HD(2,GPT,066DD320-EF61-449D-88CB-48B603A295E1,0x64028,0x1D161920)/VenMedia(BE74FCF7-0B7C-49F3-9147-01F4042E6842,25188281F5051E4F83CD2563D5B62E7C)/\41651A92-2BE3-4950-A503-8C39B4859C2F\System\Library\CoreServices\boot.efi
-BootFFFF: PciRoot(0x0)/Pci(0x1F,0x2)/Sata(0x4,0x0,0x0)/HD(2,GPT,FFE4FF73-7834-4969-B1F5-1ACC09BEF3D5,0x64028,0x746A2D60)/VenMedia(BE74FCF7-0B7C-49F3-9147-01F4042E6842,5C66853E1A247A4DA378F5D95F5F72CA)/\809DFFD4-3B75-4ED6-AD2D-7F3D999488F1\System\Library\CoreServices\boot.efi
-2 boots since last garbage collection, MTC counter: 1 - 3
-3  (1 active) Memory Configs g (ok)
-3  (1 active) Memory Configs h (ok)
-1  (1 active) Memory Configs i (ok)
-1  (1 active) Memory Configs j (ok)
-0  Microsoft certificates (ok)
-1  (1 active) BluetoothActiveControllerInfos (ok)
-1  (1 active) BluetoothInternalControllerInfos (ok)
-2  (0 active) Boot PathProperties0000 (ok)
-2  (1 active) NVRAM PathProperties0000 (ok)
-VSS2 is empty (ok after recent full nvram reset or after flashing a rebuilt firmware)
-41827 bytes free space of 65464
-VSS1 (Formatted) (Healthy), found 45 variables (29 valid, 16 deleted)
-VSS2 (Formatted) (Healthy)
+test_nvram_shell_script 12-Mar-2024 by Macschrauber  
+scanning: 1.bin  
+  
+nvram.vol position: 0x120000, size: 0x30000, header size: 0x48  
+vss1_position: 00120048: 2456 5353       $VSS  
+vss2_position: 00130048: 2456 5353       $VSS  
+fsys_position: 00148000: 4673 7973       Fsys  
+gaid_position: 00148800: 4761 6964       Gaid  
+0x120048 first stream start position ok, stored in /tmp/VSS_Store1.bin, length: 0x0000ffb8  
+0x130048 second stream start position ok, stored in /tmp/VSS_Store2.bin, length: 0x0000ffb8  
+0x148000 Fsys start position ok, header: 080000 000008  
+0x148800 Gaid start position ok, header: 080000 000018  
+Firmware 144.0.0.0.0 (latest) built on Fri Apr 12 12:43:00 2019  
+Bios Version: MP51.88Z.F000.B00.1904121248  
+MP41, Serial from firmware: 3Txxxxxxxxxxx  
+Macserial reported the serial number seems to be possibly valid  
+MP41 backplane made in 2009  
+LBSN: J59xxxxxx1LTC   BD: 0904xx0904xx   LBSN sector of MP51  
+hwc: 9MD   son: 625-9217  
+CRC32 checksums: ok  
+Bootblock version: AAPLEFI1.88Z.0005.I00.1904121247  
+Bootblock of 144.0.0.0.0 (rebuilt firmware)  
+Base_18 hardware descriptor  
+Fsys | Gaid headers: 080000 000008 | 080000 000018  
+Fsys: 0 override-version, 1 overrides, 2 ssn, 3 hwc, 4 son, 5 EOF (ok)  
+fmm-computer-name: xxx Mac Pro  
+BootOrder: 1:Boot0080  
+Boot0080: Mac OS X PciRoot(0x0)/Pci(0x3,0x0)/Pci(0x0,0x0)/SasEx(0x01000000,0x00253856,0xDF5F,0xB181,0,0,0)/HD(2,GPT,066DD320-EF61-449D-88CB-48B603A295E1,0x64028,0x1D161920)/VenMedia(BE74FCF7-0B7C-49F3-9147-01F4042E6842,25188281F5051E4F83CD2563D5B62E7C)/\41651A92-2BE3-4950-A503-8C39B4859C2F\System\Library\CoreServices\boot.efi  
+BootFFFF: PciRoot(0x0)/Pci(0x1F,0x2)/Sata(0x4,0x0,0x0)/HD(2,GPT,FFE4FF73-7834-4969-B1F5-1ACC09BEF3D5,0x64028,0x746A2D60)/VenMedia(BE74FCF7-0B7C-49F3-9147-01F4042E6842,5C66853E1A247A4DA378F5D95F5F72CA)/\809DFFD4-3B75-4ED6-AD2D-7F3D999488F1\System\Library\CoreServices\boot.efi  
+2 boots since last garbage collection, MTC counter: 1 - 3  
+3  (1 active) Memory Configs g (ok)  
+3  (1 active) Memory Configs h (ok)  
+1  (1 active) Memory Configs i (ok)  
+1  (1 active) Memory Configs j (ok)  
+0  Microsoft certificates (ok)  
+1  (1 active) BluetoothActiveControllerInfos (ok)  
+1  (1 active) BluetoothInternalControllerInfos (ok)  
+2  (0 active) Boot PathProperties0000 (ok)  
+2  (1 active) NVRAM PathProperties0000 (ok)  
+VSS2 is empty (ok after recent full nvram reset or after flashing a rebuilt firmware)  
+41827 bytes free space of 65464  
+VSS1 (Formatted) (Healthy), found 45 variables (29 valid, 16 deleted)  
+VSS2 (Formatted) (Healthy)  
 
 
 
