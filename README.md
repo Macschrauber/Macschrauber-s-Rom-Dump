@@ -2,10 +2,15 @@ What is it?
 
 A tool for dumping and flashing the firmware of a Mac Pro 4.1 / 5.1 combined with an analyser of the NVRAM content and the firmware validity.
 
+Also it can dummp and analyse firmwares from the most Macs from around 2006 to 2017.
+
+
+
+
 example output of a rom dump, version 10-3-2024
 
-$ test_nvram 1.bin 
-===================================================
+\$test_nvram 1.bin  
+\===================================================  
 test_nvram_shell_script 12-Mar-2024 by Macschrauber  
 scanning: 1.bin  
   
@@ -52,22 +57,27 @@ VSS2 (Formatted) (Healthy)
 
 
 
+——————————————————
+
 
 
 I needed to encrypt the disk image as Gatekeeper flaggs it for containing Flashrom.
 The password is rom.
+  
 
 
 
+——————————————————
 
 
+  
 If you encounter an error regarding an unknown developer when attempting to open the Dumper, macOS displays a message stating: 'macOS cannot verify the developer of.'
-
+  
 To allow the system to open the Dumper, perform a Ctrl-click on it and select <open>.
-
-
+    
+  
 If you receive a message indicating that either the app or the disk image (.dmg) is damaged:
-
+  
 If this dialog persists, you can resolve it using Terminal with the following command:
 xattr -cr "/path/to/RomDump Macschrauber.app"
 
@@ -111,19 +121,13 @@ for running RomDump Macschrauber csrutil enable --without kext is enough
 
 Special thanks to:
 
-	•	tsialex for investigating the Mac bootrom and sharing the information.
- 
-	•	Syncretic for scanvss.
- 
-	•	LongSoft for UEFIExtract.
- 
-	•	joevt for rebuilding DirectHW.kext for all Mac OS versions.
- 
-	•	startergo for help with compiling issues.
-	
- 	•	Dayo for assistance with English grammar and spelling, as well as his excellent RefindPlus bootloader.
-	
- 	•	Takaaki Naganoya@Piyomaru Software for the scrollable dialog "displaytextview"
+	•	tsialex for investigating the Mac bootrom and sharing the information.  
+	•	Syncretic for scanvss.  
+	•	LongSoft for UEFIExtract.  
+	•	joevt for rebuilding DirectHW.kext for all Mac OS versions.  
+	•	startergo for help with compiling issues.  
+ 	•	Dayo for assistance with English grammar and spelling, as well as his excellent RefindPlus bootloader.  
+ 	•	Takaaki Naganoya@Piyomaru Software for the scrollable dialog "displaytextview"  
 
 
 ———————————————————————————————————————————————
@@ -131,5 +135,5 @@ Special thanks to:
 
 I have a youtube channel: https://www.youtube.com/channel/UCx5HT0rwmVaKNraMHW-Z3bQ
 
-
+  
 If you require assistance with a damaged boot ROM, feel free to contact me in English or German at tigerpost@gmx.de
