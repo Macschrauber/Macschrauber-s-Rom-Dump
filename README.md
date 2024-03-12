@@ -15,7 +15,8 @@ Alternatively, you can:
 Execute the script named "RomDump Macschrauber is damaged fix."
 Use the included Downloader to obtain a copy with no quarantine flag set.
 
-in case the Downloader is not included: https://www.dropbox.com/s/t5k7j4gxj8n9pj2/Download%20Macschrauber%27s%20CMP%20Rom%20Dump.zip?dl=1 
+in case the Downloader is not included:
+https://www.dropbox.com/s/t5k7j4gxj8n9pj2/Download%20Macschrauber%27s%20CMP%20Rom%20Dump.zip?dl=1 
 
 
 These issues arise from the presence of Flashrom in the package, which is flagged as potentially harmful by some malware scanners.
