@@ -1,11 +1,11 @@
 ### What is it?
 
-A tool for dumping and flashing the firmware of a Mac Pro 4.1 / 5.1 combined with an analyser of the NVRAM content and the firmware validity.
-
-
-
-Also it can dummp and analyse firmwares from the most Macs from around 2006 to 2017.
-
+A tool for dumping and flashing the firmware of a Mac Pro 4.1 / 5.1 combined with an analyser of the NVRAM content and the firmware validity.  
+  
+  
+  
+Also it can dummp and analyse firmwares from the most Macs from around 2006 to 2017.  
+  
 ### example output of a rom dump by the cli tool, version 10-3-2024
 ```
 $test_nvram 1.bin  
@@ -57,20 +57,19 @@ VSS2 (Formatted) (Healthy)
 
 
 ——————————————————
-
-
-
-### I needed to encrypt the disk image as Gatekeeper flaggs it for containing Flashrom.
-The password is rom.
+  
   
 
-
-
+### I needed to encrypt the disk image as Gatekeeper flaggs it for containing Flashrom.  
+The password is **rom**.  
+  
+  
 ——————————————————
 
 
   
-If you encounter an error regarding an unknown developer when attempting to open the Dumper, macOS displays a message stating: 'macOS cannot verify the developer of.'
+If you encounter an error regarding an unknown developer when attempting to open the Dumper, macOS displays a message stating:  
+```macOS cannot verify the developer of.``` 
   
 To allow the system to open the Dumper, perform a Ctrl-click on it and select <open>.
     
@@ -78,14 +77,14 @@ To allow the system to open the Dumper, perform a Ctrl-click on it and select <o
 ### If you receive a message indicating that either the app or the disk image (.dmg) is damaged:
   
 If this dialog persists, you can resolve it using Terminal with the following command:  
-xattr -cr "/path/to/RomDump Macschrauber.app"
+```xattr -cr "/path/to/RomDump Macschrauber.app"```
 
 
 
 Alternatively, you can:
 
 Execute the scripts in the folder "is damaged fix"
-They also can be flagged, if do xattr -cr "/path/to/the.app"
+They also can be flagged, if, do ```xattr -cr "/path/to/the.app"```
 
 
 Use the included Downloader to obtain a copy with no quarantine flag set.
@@ -104,12 +103,12 @@ These issues arise from the presence of Flashrom in the package, which is flagge
 
 If you run csrutil status, even while booted normally, you will see the component parts of it. Each of these can be selectively disabled by running one of the following commands while booted into Recovery mode:
 
-	•	csrutil enable --no-internal
-	•	csrutil enable --without kext
-	•	csrutil enable --without fs
-	•	csrutil enable --without debug
-	•	csrutil enable --without dtrace
-	•	csrutil enable --without nvram
++	csrutil enable --no-internal
++	csrutil enable --without kext 
++	csrutil enable --without fs
++	csrutil enable --without debug
++	csrutil enable --without dtrace
++	csrutil enable --without nvram
 
 You can disable two or more components by structuring the command as follows:
 csrutil enable --without kext  --without nvram
@@ -123,13 +122,13 @@ for running RomDump Macschrauber csrutil enable --without kext is enough
 
 ### Special thanks to:
 
-	•	tsialex for investigating the Mac bootrom and sharing the information.  
-	•	Syncretic for scanvss.  
-	•	LongSoft for UEFIExtract.  
-	•	joevt for rebuilding DirectHW.kext for all Mac OS versions.  
-	•	startergo for help with compiling issues.  
- 	•	Dayo for assistance with English grammar and spelling, as well as his excellent RefindPlus bootloader.  
- 	•	Takaaki Naganoya@Piyomaru Software for the scrollable dialog "displaytextview"  
++ tsialex for investigating the Mac bootrom and sharing the information.  
++ Syncretic for scanvss.  
++ LongSoft for UEFIExtract.  
++ joevt for rebuilding DirectHW.kext for all Mac OS versions.  
++ for help with compiling issues.  
++ Dayo for assistance with English grammar and spelling, as well as his excellent RefindPlus bootloader.
++ Takaaki Naganoya@Piyomaru Software for the scrollable dialog "displaytextview"  
 
 
 ———————————————————————————————————————————————
