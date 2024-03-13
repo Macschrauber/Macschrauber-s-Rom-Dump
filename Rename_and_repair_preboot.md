@@ -38,7 +38,7 @@ A wrong ```SystemVersion.plist``` file of High Sierra gives a High Sierra icon i
 
 ## The cure:
 
-[I]Replacing ```SystemVersion.plist```, ```PlatformSupport.plist``` and the ```.im4``` files with the proper versions[/I].  
+Replacing ```SystemVersion.plist```, ```PlatformSupport.plist``` and the ```.im4``` files with the proper versions.  
 They are also stored in the CoreServices folder of the System volume and in the i386 folder of the Preboot volume.
 
 So we replace the Preboot files with the proper files, and the situation is fixed. 
@@ -46,19 +46,22 @@ If the OS cannot boot anymore because of the missing Board ID (prohibition sign 
 
 ```-no_compat_check``` to the OpenCore ```config.plist```.
 
-[SPOILER="Screenshots of the cure"]
-[ATTACH type="full" alt="1 Ventura SystemVersion_plist mismatch.png"]2332226[/ATTACH]
+  
+Screenshots of the cure  
+![1](https://github.com/Macschrauber/Macschrauber-s-Rom-Dump/blob/main/assets/img_Rename_and_repair_preboot/3%20Ventura%20SystemVersion_plist%20mismatch.png)  
 1 Ventura SystemVersion_plist mismatch
-[ATTACH type="full" alt="2 show HS sys for Ventura.png"]2332227[/ATTACH]
-2 found High Sierra SystemVersion.plist in Ventura Preboot
-[ATTACH type="full" alt="3 fix it sys.png"]2332228[/ATTACH]
-3 fix SystemVersion.plist ?
-[ATTACH type="full" alt="4 fixed.png"]2332229[/ATTACH]
-4 fixed SystemVersion.plist
+![2](https://github.com/Macschrauber/Macschrauber-s-Rom-Dump/blob/main/assets/img_Rename_and_repair_preboot/4%20show%20HS%20sys%20for%20Ventura.png)  
+2 found High Sierra SystemVersion.plist in Ventura Preboot  
+![3](https://github.com/Macschrauber/Macschrauber-s-Rom-Dump/blob/main/assets/img_Rename_and_repair_preboot/5%20fix%20it%20sys.png)  
+3 fix SystemVersion.plist ?  
+![4](https://github.com/Macschrauber/Macschrauber-s-Rom-Dump/blob/main/assets/img_Rename_and_repair_preboot/6%20fixed.png)  
+4 fixed SystemVersion.plist  
+![5](https://github.com/Macschrauber/Macschrauber-s-Rom-Dump/blob/main/assets/img_Rename_and_repair_preboot/7%20Ventura%20PlatformSupport_plist%20mismatch.png)  
 [ATTACH type="full" alt="5 Ventura PlatformSupport_plist mismatch.png"]2332230[/ATTACH]
 ... same for PlatformSupport.plist ...
 [ATTACH type="full" alt="9 report after fix.png"]2332231[/ATTACH]
 5 the report when the tool is done
+
 [ATTACH type="full" alt="10 wrong contentDetails.png"]2332232[/ATTACH]
 6 .contentDetails fix
 [ATTACH type="full" alt="11 corrected contentDetails.png"]2332233[/ATTACH]
