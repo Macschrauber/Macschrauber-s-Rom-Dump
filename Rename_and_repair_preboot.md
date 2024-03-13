@@ -4,8 +4,8 @@ We discovered a serious bug: booting High Sierra without System Integrity Protec
 Consequently, the corrupted OS may appear as High Sierra and check for compatibility with Board IDs compatible with High Sierra, possibly prevents booting.  
 I've created a tool to address this problem.
 
-This is a follow-up by the writings a while ago in another thread:  
-[URL]https://forums.macrumors.com/threads/manually-configured-opencore-on-the-mac-pro.2207814/page-500?post=31995153#post-31995153[/URL]
+This is a follow-up by the writings a while ago in another Macrumors thread:  
+https://forums.macrumors.com/threads/manually-configured-opencore-on-the-mac-pro.2207814/page-500?post=31995153#post-31995153
 
 [SPOILER="Screenshots of the issue"]
 [ATTACH type="full" alt="1 ventura corrputed showing high sierra data.jpeg"]2332224[/ATTACH]
@@ -116,5 +116,5 @@ Using the Dumper to check and backup the bootrom is a good practice for all Macs
 
 
 
-link to the Dumper post:
-[URL unfurl="true"]https://forums.macrumors.com/threads/healthy-nvram-normal-behaviour-on-4-1-5-1-machines.2333460/page-4?post=32055801#post-32055801[/URL]
+link to the Macrumors Dumper post:  
+https://forums.macrumors.com/threads/healthy-nvram-normal-behaviour-on-4-1-5-1-machines.2333460/page-4?post=32055801#post-32055801
