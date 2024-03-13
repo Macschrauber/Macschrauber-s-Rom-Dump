@@ -11,40 +11,40 @@ This is a follow-up by the writings a while ago in another thread:
 [ATTACH type="full" alt="1 ventura corrputed showing high sierra data.jpeg"]2332224[/ATTACH]
 Ventura with High Sierra icon and data volume name
 [ATTACH type="full" alt="5 Mac-27AD2F918AE68F61 MP7,1 cannot boot High Sierra.jpeg"]2332225[/ATTACH]
-Try to boot the newer OS with [ICODE]High Sierra's PlatformSupport.plist[/ICODE] got prevented because Board ID of Mac Pro7,1 is missing
+Try to boot the newer OS with ```High Sierra's PlatformSupport.plist``` got prevented because Board ID of Mac Pro7,1 is missing
 [/SPOILER]
 
 ## The problem:
 
-Booting High Sierra (natively) and having APFS2 Volume(s) in the machine could possibly replace [ICODE]SystemVersion.plist[/ICODE] and [ICODE]PlatformSupport.plist[/ICODE] in the Proboot volume of another mounted APFS2 OS with its own outdated version.  
+Booting High Sierra (natively) and having APFS2 Volume(s) in the machine could possibly replace ```SystemVersion.plist``` and ```PlatformSupport.plist``` in the Proboot volume of another mounted APFS2 OS with its own outdated version.  
 
-Also, the [ICODE].contentDetails[/ICODE] and [ICODE].disk_label*[/ICODE] files, which stores the name the BootPicker and OpenCore displays for the System name, could be renamed to the data volume name of the OS.  
+Also, the ```.contentDetails``` and ```.disk_label*``` files, which stores the name the BootPicker and OpenCore displays for the System name, could be renamed to the data volume name of the OS.  
 If the Data Disk name for this system is 'Ventura - Data', High Sierra could have set the name for the System to 'Ventura - Data.'  
 
-Where the latter is just cosmetic, the no more matching board ID in [ICODE]PlatformSupport.plist[/ICODE] could make the system non-bootable.  
+Where the latter is just cosmetic, the no more matching board ID in ```PlatformSupport.plist``` could make the system non-bootable.  
 
-Also we found that it replaces 3 [ICODE].im4[/ICODE] files for Macs with T2 chip.  
+Also we found that it replaces 3 ```.im4``` files for Macs with T2 chip.  
 
 
 ## The effect:
 
-The following example details is for a Mac Pro 5,1: A wrong [ICODE]PlatformSupport.plist[/ICODE] file of High Sierra gives a [B]prohibited sign[/B], or in verbose mode, the message for an [B]unsupported board ID[/B] of a Mac Pro 7,1 [ICODE]Mac-27AD2F918AE68F61[/ICODE] if this machine is spoofed.  
+The following example details is for a Mac Pro 5,1: A wrong ```PlatformSupport.plist``` file of High Sierra gives a [B]prohibited sign[/B], or in verbose mode, the message for an [B]unsupported board ID[/B] of a Mac Pro 7,1 ```Mac-27AD2F918AE68F61``` if this machine is spoofed.  
 And shuts down hard after 30 seconds.
 
-If we set the boot-arg [ICODE]-no_compat_check[/ICODE] in OpenCore's [ICODE]config.plist[/ICODE], the OS ignores these issues and boots.  
+If we set the boot-arg ```-no_compat_check``` in OpenCore's ```config.plist```, the OS ignores these issues and boots.  
 
-A wrong [ICODE]SystemVersion.plist[/ICODE] file of High Sierra gives a High Sierra icon in the OpenCore boot menu (which is just cosmetic) but could [B]prevent the OS from updating or installing[/B] an OS reading the wrong High Sierra version 10.13.x.  
+A wrong ```SystemVersion.plist``` file of High Sierra gives a High Sierra icon in the OpenCore boot menu (which is just cosmetic) but could [B]prevent the OS from updating or installing[/B] an OS reading the wrong High Sierra version 10.13.x.  
 
 
 ## The cure:
 
-[I]Replacing [ICODE]SystemVersion.plist[/ICODE], [ICODE]PlatformSupport.plist[/ICODE] and the [ICODE].im4[/ICODE] files with the proper versions[/I].  
+[I]Replacing ```SystemVersion.plist```, ```PlatformSupport.plist``` and the ```.im4``` files with the proper versions[/I].  
 They are also stored in the CoreServices folder of the System volume and in the i386 folder of the Preboot volume.
 
 So we replace the Preboot files with the proper files, and the situation is fixed. 
 If the OS cannot boot anymore because of the missing Board ID (prohibition sign or Board ID message), we need to either boot another APFS2 capable OS, mount the System volume, and replace the files or add the boot-arg:  
 
-[ICODE]-no_compat_check[/ICODE] to the OpenCore [ICODE]config.plist[/ICODE].
+```-no_compat_check``` to the OpenCore ```config.plist```.
 
 [SPOILER="Screenshots of the cure"]
 [ATTACH type="full" alt="1 Ventura SystemVersion_plist mismatch.png"]2332226[/ATTACH]
@@ -74,12 +74,12 @@ If the OS cannot boot anymore because of the missing Board ID (prohibition sign 
 ## The tool:
 
 
-[ICODE]Preboot fixer and renamer[/ICODE] checks all Preboot folders for matching SystemVersion / PlatformSupport plists and [ICODE].im4[/ICODE] files and asks for replacing them if they don't match.  
+```Preboot fixer and renamer``` checks all Preboot folders for matching SystemVersion / PlatformSupport plists and ```.im4``` files and asks for replacing them if they don't match.  
 
 If it is started on an APFS1 OS (late versions of Sierra, High Sierra, Mojave), it cannot mount the APFS2 System volume to read the original plists.  
-However, it alarms if it finds High Sierra [ICODE]SystemVersion.plist[/ICODE] files in APFS2 Preboots.  
+However, it alarms if it finds High Sierra ```SystemVersion.plist``` files in APFS2 Preboots.  
 
-The wrong [ICODE].contentDetails[/ICODE] and the [ICODE].disk_label*[/ICODE] icon drawn by the native Apple boot picker can be rebuilt by the tool as well.  
+The wrong ```.contentDetails``` and the ```.disk_label*``` icon drawn by the native Apple boot picker can be rebuilt by the tool as well.  
 
 You can edit the names and icons with the tool as well, even with multiple lines by entering option-return for a new line.  
 This is the button <proceed with label editor>. Thanks to [USER=710085]@joevt[/USER] for all the help and providing the bash functions for it.  
@@ -92,9 +92,9 @@ The [USER=710085]@joevt[/USER] multiline names are ESPs, there is also a tool fo
 
 ## Maybe a possible exorcism:
 
-you can try to update the date of High Sierra's  [ICODE]SystemVersion.plist[/ICODE]  
+you can try to update the date of High Sierra's ```SystemVersion.plist```  
 This needs more testing but it seems it helps, preventing High Sierra from replacing files in newer System's Preboots.  
-Boot High Sierra and do this in [ICODE]Terminal[/ICODE]  
+Boot High Sierra and do this in ```Terminal```  
 
 ```
 sudo touch -t 203009110327 /System/Library/CoreServices/SystemVersion.plist
@@ -103,14 +103,14 @@ sudo touch -t 203009042358 /System/Library/CoreServices/PlatformSupport.plist
 
 
 
-/*  
+\*  
 APFS1: APFS Systems with one volume  
 APFS2: APFS Systems with a separated system and data volume  
 
 
 
 I placed the tools in my firmware dumper package to ease administration.
-They can be found in the [ICODE]Readme & other tools[/ICODE] folder.  
+They can be found in the ```Readme & other tools``` folder.  
 Using the Dumper to check and backup the bootrom is a good practice for all Macs, but that's another topic ;-)  
 
 
