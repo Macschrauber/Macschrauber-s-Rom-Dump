@@ -96,15 +96,16 @@ you can try to update the date of High Sierra's  [ICODE]SystemVersion.plist[/ICO
 This needs more testing but it seems it helps, preventing High Sierra from replacing files in newer System's Preboots.  
 Boot High Sierra and do this in [ICODE]Terminal[/ICODE]  
 
-```sudo touch -t 203009110327 /System/Library/CoreServices/SystemVersion.plist
-sudo touch -t 203009042358 /System/Library/CoreServices/PlatformSupport.plist```
+```
+sudo touch -t 203009110327 /System/Library/CoreServices/SystemVersion.plist
+sudo touch -t 203009042358 /System/Library/CoreServices/PlatformSupport.plist
+```
 
 
 
-
-*
-[INDENT]APFS1: APFS Systems with one volume[/INDENT]
-[INDENT]APFS2: APFS Systems with a separated system and data volume[/INDENT]
+/*  
+APFS1: APFS Systems with one volume  
+APFS2: APFS Systems with a separated system and data volume  
 
 
 
