@@ -77,7 +77,7 @@ To allow the system to open the Dumper, perform a Ctrl-click on it and select <o
   
 ### If you receive a message indicating that either the app or the disk image (.dmg) is damaged:
   
-If this dialog persists, you can resolve it using Terminal with the following command:
+If this dialog persists, you can resolve it using Terminal with the following command:  
 xattr -cr "/path/to/RomDump Macschrauber.app"
 
 
@@ -90,7 +90,7 @@ They also can be flagged, if do xattr -cr "/path/to/the.app"
 
 Use the included Downloader to obtain a copy with no quarantine flag set.
 
-in case the Downloader is not included:
+in case the Downloader is not included:  
 https://www.dropbox.com/s/t5k7j4gxj8n9pj2/Download%20Macschrauber%27s%20CMP%20Rom%20Dump.zip?dl=1 
 
 
