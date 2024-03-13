@@ -8,10 +8,10 @@ This is a follow-up by the writings a while ago in another Macrumors thread:
 https://forums.macrumors.com/threads/manually-configured-opencore-on-the-mac-pro.2207814/page-500?post=31995153#post-31995153
 
 Screenshots of the issue:
-![BootPicker](https://github.com/Macschrauber/Macschrauber-s-Rom-Dump/blob/main/assets/img/1%20ventura%20corrputed%20showing%20high%20sierra%20data.jpeg)
+![BootPicker](https://github.com/Macschrauber/Macschrauber-s-Rom-Dump/blob/main/assets/img_Rename_and_repair_preboot/1%20ventura%20corrputed%20showing%20high%20sierra%20data.jpeg)
 Ventura with High Sierra icon and data volume name  
 
-![MP7,1BoardID](https://github.com/Macschrauber/Macschrauber-s-Rom-Dump/blob/main/assets/img/2%20Mac-27AD2F918AE68F61%20MP7,1%20cannot%20boot%20High%20Sierra.jpeg)  
+![MP7,1BoardID](https://github.com/Macschrauber/Macschrauber-s-Rom-Dump/blob/main/assets/img_Rename_and_repair_preboot/2%20Mac-27AD2F918AE68F61%20MP7,1%20cannot%20boot%20High%20Sierra.jpeg?raw=true)
 Try to boot the newer OS with ```High Sierra's PlatformSupport.plist``` got prevented because Board ID of Mac Pro7,1 is missing, if not spoofless approach.
 
 ## The problem:
