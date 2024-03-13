@@ -28,12 +28,12 @@ Also we found that it replaces 3 ```.im4``` files for Macs with T2 chip.
 
 ## The effect:
 
-The following example details is for a Mac Pro 5,1: A wrong ```PlatformSupport.plist``` file of High Sierra gives a [B]prohibited sign[/B], or in verbose mode, the message for an [B]unsupported board ID[/B] of a Mac Pro 7,1 ```Mac-27AD2F918AE68F61``` if this machine is spoofed.  
+The following example details is for a Mac Pro 5,1: A wrong ```PlatformSupport.plist``` file of High Sierra gives a **prohibited sign**, or in verbose mode, the message for an **unsupported board ID** of a Mac Pro 7,1 ```Mac-27AD2F918AE68F61``` if this machine is spoofed.  
 And shuts down hard after 30 seconds.
 
 If we set the boot-arg ```-no_compat_check``` in OpenCore's ```config.plist```, the OS ignores these issues and boots.  
 
-A wrong ```SystemVersion.plist``` file of High Sierra gives a High Sierra icon in the OpenCore boot menu (which is just cosmetic) but could [B]prevent the OS from updating or installing[/B] an OS reading the wrong High Sierra version 10.13.x.  
+A wrong ```SystemVersion.plist``` file of High Sierra gives a High Sierra icon in the OpenCore boot menu (which is just cosmetic) but could **prevent the OS from updating or installing** an OS reading the wrong High Sierra version 10.13.x.  
 
 
 ## The cure:
