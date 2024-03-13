@@ -7,9 +7,9 @@ A tool for dumping and flashing the firmware of a Mac Pro 4.1 / 5.1 combined wit
 Also it can dummp and analyse firmwares from the most Macs from around 2006 to 2017.
 
 ### example output of a rom dump by the cli tool, version 10-3-2024
-
-\$test_nvram 1.bin  
-\===================================================  
+```
+$test_nvram 1.bin  
+===================================================  
 test_nvram_shell_script 10-Mar-2024 by Macschrauber  
 scanning: 1.bin  
   
@@ -53,7 +53,7 @@ VSS2 is empty (ok after recent full nvram reset or after flashing a rebuilt firm
 41827 bytes free space of 65464  
 VSS1 (Formatted) (Healthy), found 45 variables (29 valid, 16 deleted)  
 VSS2 (Formatted) (Healthy)  
-
+```
 
 
 ——————————————————
