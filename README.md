@@ -1,4 +1,4 @@
-What is it?
+### What is it?
 
 A tool for dumping and flashing the firmware of a Mac Pro 4.1 / 5.1 combined with an analyser of the NVRAM content and the firmware validity.
 
@@ -6,7 +6,7 @@ A tool for dumping and flashing the firmware of a Mac Pro 4.1 / 5.1 combined wit
 
 Also it can dummp and analyse firmwares from the most Macs from around 2006 to 2017.
 
-example output of a rom dump by the cli tool, version 10-3-2024
+### example output of a rom dump by the cli tool, version 10-3-2024
 
 \$test_nvram 1.bin  
 \===================================================  
@@ -60,7 +60,7 @@ VSS2 (Formatted) (Healthy)
 
 
 
-I needed to encrypt the disk image as Gatekeeper flaggs it for containing Flashrom.
+### I needed to encrypt the disk image as Gatekeeper flaggs it for containing Flashrom.
 The password is rom.
   
 
@@ -75,7 +75,7 @@ If you encounter an error regarding an unknown developer when attempting to open
 To allow the system to open the Dumper, perform a Ctrl-click on it and select <open>.
     
   
-If you receive a message indicating that either the app or the disk image (.dmg) is damaged:
+### If you receive a message indicating that either the app or the disk image (.dmg) is damaged:
   
 If this dialog persists, you can resolve it using Terminal with the following command:
 xattr -cr "/path/to/RomDump Macschrauber.app"
@@ -84,7 +84,10 @@ xattr -cr "/path/to/RomDump Macschrauber.app"
 
 Alternatively, you can:
 
-Execute the script named "RomDump Macschrauber is damaged fix."
+Execute the scripts in the folder "is damaged fix"
+They also can be flagged, if do xattr -cr "/path/to/the.app"
+
+
 Use the included Downloader to obtain a copy with no quarantine flag set.
 
 in case the Downloader is not included:
@@ -97,7 +100,7 @@ These issues arise from the presence of Flashrom in the package, which is flagge
 
 
 
-Yes, you can indeed disable parts of SIP while leaving others enabled.
+### Yes, you can indeed disable parts of SIP while leaving others enabled.
 
 If you run csrutil status, even while booted normally, you will see the component parts of it. Each of these can be selectively disabled by running one of the following commands while booted into Recovery mode:
 
@@ -118,7 +121,7 @@ for running RomDump Macschrauber csrutil enable --without kext is enough
 
 ———————————————————————————————————————————————
 
-Special thanks to:
+### Special thanks to:
 
 	•	tsialex for investigating the Mac bootrom and sharing the information.  
 	•	Syncretic for scanvss.  
@@ -132,7 +135,7 @@ Special thanks to:
 ———————————————————————————————————————————————
 
 
-I have a youtube channel: https://www.youtube.com/channel/UCx5HT0rwmVaKNraMHW-Z3bQ
+### I have a youtube channel: https://www.youtube.com/channel/UCx5HT0rwmVaKNraMHW-Z3bQ
 
   
-If you require assistance with a damaged boot ROM, feel free to contact me in English or German at tigerpost@gmx.de
+### If you require assistance with a damaged boot ROM, feel free to contact me in English or German at tigerpost@gmx.de
