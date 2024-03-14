@@ -1,4 +1,4 @@
-## Summary
+![grafik](https://github.com/Macschrauber/Macschrauber-s-Rom-Dump/assets/82045534/9bba7a0f-91c1-404f-8a88-495511cc0674)## Summary
 
 We discovered a serious bug: booting High Sierra without System Integrity Protection (csrutil disable) possibly corrupts another mounted (unsupported) APFS2* OS Preboot volume, even when on another drive.  
 Consequently, the corrupted OS may appear as High Sierra and check for compatibility with Board IDs compatible with High Sierra, possibly prevents booting.  
@@ -44,36 +44,48 @@ They are also stored in the CoreServices folder of the System volume and in the 
 So we replace the Preboot files with the proper files, and the situation is fixed. 
 If the OS cannot boot anymore because of the missing Board ID (prohibition sign or Board ID message), we need to either boot another APFS2 capable OS, mount the System volume, and replace the files or add the boot-arg:  
 
-```-no_compat_check``` to the OpenCore ```config.plist```.
+```-no_compat_check``` to the OpenCore ```config.plist```.  
+
 
   
 Screenshots of the cure  
+
 ![1](https://github.com/Macschrauber/Macschrauber-s-Rom-Dump/blob/main/assets/img_Rename_and_repair_preboot/3%20Ventura%20SystemVersion_plist%20mismatch.png)  
 1 Ventura SystemVersion_plist mismatch
+
 ![2](https://github.com/Macschrauber/Macschrauber-s-Rom-Dump/blob/main/assets/img_Rename_and_repair_preboot/4%20show%20HS%20sys%20for%20Ventura.png)  
 2 found High Sierra SystemVersion.plist in Ventura Preboot  
+
 ![3](https://github.com/Macschrauber/Macschrauber-s-Rom-Dump/blob/main/assets/img_Rename_and_repair_preboot/5%20fix%20it%20sys.png)  
-3 fix SystemVersion.plist ?  
+3 fix SystemVersion.plist?  
+
 ![4](https://github.com/Macschrauber/Macschrauber-s-Rom-Dump/blob/main/assets/img_Rename_and_repair_preboot/6%20fixed.png)  
 4 fixed SystemVersion.plist  
+
 ![5](https://github.com/Macschrauber/Macschrauber-s-Rom-Dump/blob/main/assets/img_Rename_and_repair_preboot/7%20Ventura%20PlatformSupport_plist%20mismatch.png)  
-[ATTACH type="full" alt="5 Ventura PlatformSupport_plist mismatch.png"]2332230[/ATTACH]
-... same for PlatformSupport.plist ...
-[ATTACH type="full" alt="9 report after fix.png"]2332231[/ATTACH]
-5 the report when the tool is done
+5 Ventura PlatformSupport_plist mismatch.png  
 
-[ATTACH type="full" alt="10 wrong contentDetails.png"]2332232[/ATTACH]
-6 .contentDetails fix
-[ATTACH type="full" alt="11 corrected contentDetails.png"]2332233[/ATTACH]
-7 .contentDetails fixed
-[ATTACH type="full" alt="12 second test.png"]2332234[/ATTACH]
-8 a second run of Preboot fixer
+![6](https://github.com/Macschrauber/Macschrauber-s-Rom-Dump/blob/main/assets/img_Rename_and_repair_preboot/8%20report%20after%20fix.png)  
+6 the report when the tool is done  
 
-[ATTACH type="full" alt="2 ventura repaired.jpeg"]2332242[/ATTACH]
-9 Ventura icon and System name are back
+![7](https://github.com/Macschrauber/Macschrauber-s-Rom-Dump/blob/main/assets/img_Rename_and_repair_preboot/9%20corrected%20contentDetails.png)  
+7 .contentDetails fix  
 
-[/SPOILER]
+![8](https://github.com/Macschrauber/Macschrauber-s-Rom-Dump/blob/main/assets/img_Rename_and_repair_preboot/A%20second%20test.png)  
+8 .contentDetails fixed  
 
+
+![9](https://github.com/Macschrauber/Macschrauber-s-Rom-Dump/blob/main/assets/img_Rename_and_repair_preboot/B%20ventura%20repaired.jpeg)  
+9 a second run of Preboot fixer  
+
+
+![10](https://github.com/Macschrauber/Macschrauber-s-Rom-Dump/blob/main/assets/img_Rename_and_repair_preboot/C%20Boot%20Picker%20with%20custom%20names.jpeg)  
+10 Ventura icon and System name are back  
+
+  
+  
+  
+  
 ## The tool:
 
 
