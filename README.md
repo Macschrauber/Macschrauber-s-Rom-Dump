@@ -1,25 +1,27 @@
 ### What is it?
 
-A tool for dumping and flashing the firmware of a Mac Pro 4,1 / 5,1 combined with an analyser of the NVRAM content and the firmware validity.  
-  
-  
+A tool for dumping and flashing the firmware of a Mac Pro 4,1 / 5,1 combined with an analyser of the NVRAM content and the firmware validity.
+
+<br>
+
 It reads and writes to a ch341a USB programmer as well to work with desoldered flash chips. It detects a connected programmer and installs the libs to communicate with it. 
   
 Also it can dump and analyse firmwares from the most Macs from around 2006 to 2017.  
 
 I added some tools around the Mac administration that I wrote and find useful. Check out the other .md files for them.  
-  
-  
-  
+
+<br>
+
 ### example output of the Dumper (main GUI tool)
 ![1](https://github.com/Macschrauber/Macschrauber-s-Rom-Dump/blob/main/assets/img_Dumper/5a.%20analyses%20scrollable.png)  
-  
-  
-  
+
+<br>
+
 ### example flashing dialog of the Dumper  
 ![2](https://github.com/Macschrauber/Macschrauber-s-Rom-Dump/blob/main/assets/img_Dumper/8%20readout%20of%20the%20flashed%20firmware%20to%20verify.png)  
-  
-  
+
+<br>
+
 ### example output of a rom dump by the cli tool, version 10-3-2024
 ```
 $test_nvram 1.bin  
@@ -68,38 +70,31 @@ VSS2 is empty (ok after recent full nvram reset or after flashing a rebuilt firm
 VSS1 (Formatted) (Healthy), found 45 variables (29 valid, 16 deleted)  
 VSS2 (Formatted) (Healthy)  
 ```
+<br><br>
+### ==> I needed to encrypt the disk image as Gatekeeper flaggs it for containing Flashrom. <==  
+### *The password is **rom**.*
+<br><br>
 
-
-——————————————————
-  
-  
-
-### I needed to encrypt the disk image as Gatekeeper flaggs it for containing Flashrom.  
-The password is **rom**.  
-  
-  
-——————————————————
-
-
-  
 If you encounter an error regarding an unknown developer when attempting to open the Dumper, macOS displays a message stating:  
 ```macOS cannot verify the developer of.``` 
   
 To allow the system to open the Dumper, perform a Ctrl-click on it and select <open>.
-    
-  
+
+<br>
+
 ### If you receive a message indicating that either the app or the disk image (.dmg) is damaged:
   
 If this dialog persists, you can resolve it using Terminal with the following command:  
 ```xattr -cr "/path/to/RomDump Macschrauber.app"```
 
-
+<br>
 
 Alternatively, you can:
 
 Execute the scripts in the folder "is damaged fix"
 They also can be flagged, if, do ```xattr -cr "/path/to/the.app"```
 
+<br>
 
 Use the included Downloader to obtain a copy with no quarantine flag set.
 
@@ -129,11 +124,8 @@ csrutil enable --without kext  --without nvram
 
 
 for running RomDump Macschrauber csrutil enable --without kext is enough
-
-
-
+<br><br>
 ———————————————————————————————————————————————
-
 ### Special thanks to:
 
 + flashrom.org for the cli tool communicating with the Mac firmware chip.
@@ -144,14 +136,13 @@ for running RomDump Macschrauber csrutil enable --without kext is enough
 + for help with compiling issues.  
 + Dayo for assistance with English grammar and spelling, as well as his excellent RefindPlus bootloader.
 + Takaaki Naganoya@Piyomaru Software for the scrollable dialog "displaytextview"  
-
-
+  
 ———————————————————————————————————————————————
-
 
 ### I have a youtube channel: https://www.youtube.com/channel/UCx5HT0rwmVaKNraMHW-Z3bQ
 
+<br><br>
   
 ### If you require assistance with a damaged boot Rom, feel free to contact me in English or German at ```tigerpost@gmx.de```
 
-if you want to communicate at Github the preferred language is english.
+If you want to communicate at Github the preferred language is english.
