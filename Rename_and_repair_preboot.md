@@ -4,7 +4,7 @@ We discovered a serious bug: booting High Sierra without System Integrity Protec
 Consequently, the corrupted OS may appear as High Sierra and check for compatibility with Board IDs compatible with High Sierra, possibly prevents booting.  
 I've created a tool to address this problem.
 
-This is a follow-up by the writings a while ago in another Macrumors thread:  
+This is a follow-up by the writings a while ago in a Macrumors thread:  
 https://forums.macrumors.com/threads/manually-configured-opencore-on-the-mac-pro.2207814/page-500?post=31995153#post-31995153
 
 Screenshots of the issue:
@@ -13,6 +13,8 @@ Ventura with High Sierra icon and data volume name
 
 ![MP7,1BoardID](https://github.com/Macschrauber/Macschrauber-s-Rom-Dump/blob/main/assets/img_Rename_and_repair_preboot/2%20Mac-27AD2F918AE68F61%20MP7,1%20cannot%20boot%20High%20Sierra.jpeg?raw=true)
 Try to boot the newer OS with ```High Sierra's PlatformSupport.plist``` got prevented because Board ID of Mac Pro7,1 is missing, if not spoofless approach.
+
+<br>
 
 ## The problem:
 
@@ -25,6 +27,7 @@ Where the latter is just cosmetic, the no more matching board ID in ```PlatformS
 
 Also we found that it replaces 3 ```.im4``` files for Macs with T2 chip.  
 
+<br>
 
 ## The effect:
 
@@ -35,6 +38,7 @@ If we set the boot-arg ```-no_compat_check``` in OpenCore's ```config.plist```, 
 
 A wrong ```SystemVersion.plist``` file of High Sierra gives a High Sierra icon in the OpenCore boot menu (which is just cosmetic) but could **prevent the OS from updating or installing** an OS reading the wrong High Sierra version 10.13.x.  
 
+<br>
 
 ## The cure:
 
@@ -46,8 +50,8 @@ If the OS cannot boot anymore because of the missing Board ID (prohibition sign 
 
 ```-no_compat_check``` to the OpenCore ```config.plist```.  
 
+<br>
 
-  
 Screenshots of the cure  
 ___________________
 ![1](https://github.com/Macschrauber/Macschrauber-s-Rom-Dump/blob/main/assets/img_Rename_and_repair_preboot/3%20Ventura%20SystemVersion_plist%20mismatch.png)  
@@ -81,10 +85,8 @@ ___________________
 10 ESPs were renamed by the ```Label all bootloader ESPs```tool of the Dumper package, names are correct (or adjusted). 
 ___________________
 
-  
-  
-  
-  
+<br>
+
 ## The tool:
 
 
@@ -102,7 +104,7 @@ This is the button <proceed with label editor>. Thanks to [USER=710085]@joevt[/U
 [CENTER]the names in the boot picker could be renamed by the preboot fixer and renamer tool
 The [USER=710085]@joevt[/USER] multiline names are ESPs, there is also a tool for renaming ESPs in the Dumper package[/CENTER]
 
-
+<br>
 
 ## Maybe a possible exorcism:
 
@@ -114,21 +116,19 @@ Boot High Sierra and do this in ```Terminal```
 sudo touch -t 203009110327 /System/Library/CoreServices/SystemVersion.plist
 sudo touch -t 203009042358 /System/Library/CoreServices/PlatformSupport.plist
 ```
+<br>
 
-
-
-\*  
+\*   
 APFS1: APFS Systems with one volume  
 APFS2: APFS Systems with a separated system and data volume  
 
 
-
+<br>
 I placed the tools in my firmware dumper package to ease administration.
 They can be found in the ```Readme & other tools``` folder.  
 Using the Dumper to check and backup the bootrom is a good practice for all Macs, but that's another topic ;-)  
 
 
-
-
+<br>
 link to the Macrumors Dumper post:  
 https://forums.macrumors.com/threads/healthy-nvram-normal-behaviour-on-4-1-5-1-machines.2333460/page-4?post=32055801#post-32055801
