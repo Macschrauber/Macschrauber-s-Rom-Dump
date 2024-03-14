@@ -1,10 +1,24 @@
 ### What is it?
 
-A tool for dumping and flashing the firmware of a Mac Pro 4.1 / 5.1 combined with an analyser of the NVRAM content and the firmware validity.  
+A tool for dumping and flashing the firmware of a Mac Pro 4,1 / 5,1 combined with an analyser of the NVRAM content and the firmware validity.  
   
   
+It reads and writes to a ch341a USB programmer as well to work with desoldered flash chips. It detects a connected programmer and installs the libs to communicate with it. 
   
 Also it can dummp and analyse firmwares from the most Macs from around 2006 to 2017.  
+
+I added some tools around the Mac administration what I wrote and find useful. Check out the other .md files for them.  
+  
+  
+  
+### example output of the Dumper (main GUI tool)
+![1](https://github.com/Macschrauber/Macschrauber-s-Rom-Dump/blob/main/assets/img_Dumper/5a.%20analyses%20scrollable.png)  
+  
+  
+  
+### example flashing dialog of the Dumper  
+![2](https://github.com/Macschrauber/Macschrauber-s-Rom-Dump/blob/main/assets/img_Dumper/8%20readout%20of%20the%20flashed%20firmware%20to%20verify.png)  
+  
   
 ### example output of a rom dump by the cli tool, version 10-3-2024
 ```
@@ -122,6 +136,7 @@ for running RomDump Macschrauber csrutil enable --without kext is enough
 
 ### Special thanks to:
 
++ flashrom.org for the cli tool communicating with the Mac firmware chip.
 + tsialex for investigating the Mac bootrom and sharing the information.  
 + Syncretic for scanvss.  
 + LongSoft for UEFIExtract.  
@@ -137,4 +152,6 @@ for running RomDump Macschrauber csrutil enable --without kext is enough
 ### I have a youtube channel: https://www.youtube.com/channel/UCx5HT0rwmVaKNraMHW-Z3bQ
 
   
-### If you require assistance with a damaged boot ROM, feel free to contact me in English or German at tigerpost@gmx.de
+### If you require assistance with a damaged boot Rom, feel free to contact me in English or German at ```tigerpost@gmx.de```
+
+if you want to communicate at Github the preferred language is english.
