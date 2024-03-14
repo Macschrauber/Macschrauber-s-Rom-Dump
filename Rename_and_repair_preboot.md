@@ -75,11 +75,10 @@ ___________________
 8 .contentDetails fixed
 ___________________  
 ![9](https://github.com/Macschrauber/Macschrauber-s-Rom-Dump/blob/main/assets/img_Rename_and_repair_preboot/B%20ventura%20repaired.jpeg)  
-9 a second run of Preboot fixer
-___________________  
+9 Ventura icon and System name are back
+___________________
 ![10](https://github.com/Macschrauber/Macschrauber-s-Rom-Dump/blob/main/assets/img_Rename_and_repair_preboot/C%20Boot%20Picker%20with%20custom%20names.jpeg)  
-10 Ventura icon and System name are back
-ESPs were renamed by the ```Label all bootloader ESPs```tool of the Dumper package
+10 ESPs were renamed by the ```Label all bootloader ESPs```tool of the Dumper package, names are correct (or adjusted). 
 ___________________
 
   
