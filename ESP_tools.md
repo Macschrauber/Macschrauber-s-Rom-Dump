@@ -36,6 +36,11 @@ what's in?
 
 **for don't just show "EFI Boot" in the bootpicker:**
 - Label all bootloader ESPs: reads all ESPs, prompts you to rename to whatever you want, default is the ESP flavor
+![1](https://github.com/Macschrauber/Macschrauber-s-Rom-Dump/blob/main/assets/img_ESP_tools/ask%20to%20change%20rp.png)
+![2](https://github.com/Macschrauber/Macschrauber-s-Rom-Dump/blob/main/assets/img_ESP_tools/changed%20rp.png)
+![3](https://github.com/Macschrauber/Macschrauber-s-Rom-Dump/blob/main/assets/img_ESP_tools/labels%20in%20bootpicker.jpg)
+<br>
+
 - Label mounted bootloader ESP: Same as Label all bootloader ESPs, but just for the single mounted one
 
 hint: if the rendered name is white on white / black on black then you may set automatic light / dark mode and a system setting is not written. If you once change to dark mode and back to automatic mode this setting is corrected.  
@@ -64,30 +69,6 @@ In OpenCore you will see a mismatched High Sierra *icon. This is due overwritten
 I just added a button to overwrite that, this will be in the next release after 17-2-2024.)
 
 <br>
-
-#ESP Copy
-[ATTACH type="full" alt="1 select source ESP.png"]2320553[/ATTACH]
-[ATTACH type="full" alt="2 select destination ESP.png"]2320554[/ATTACH]
-[ATTACH type="full" alt="3 confirm to delete destination ESP.png"]2320555[/ATTACH]
-[ATTACH type="full" alt="4 copied.png"]2320556[/ATTACH]
-[ATTACH type="full" alt="5 destination ESP with tag.png"]2320557[/ATTACH]
-------------------------------------------------------------------------------------------------------------------------------
-an archived ESP folder, DosDude APFS loader ESP is the flavor, next is the time stamp:
-[ATTACH type="full" alt="5 there is the folder.png"]2320558[/ATTACH][/SPOILER]
-
-
-[ATTACH type="full" alt="Screenshot 2023-09-05 at 23.46.05.png"]2255562[/ATTACH]
-mount ESP from list & show bootloader
-
-[ATTACH type="full" alt="labels in bootpicker.jpg"]2279827[/ATTACH]
-Labeled ESPs, normally they all show "EFI Boot"
-(the custom icons for RefindPlus are not handled by the script, that was the former method to separate them for me)
-
-[ATTACH type="full" width="532px" alt="Screenshot 2023-09-24 at 22.21.04.png"]2279828[/ATTACH]
-[ATTACH type="full" alt="Screenshot 2023-09-24 at 22.21.41.png"]2279829[/ATTACH]
-These are for setting a custom name instead of "EFI Boot" what the boot picker shows
-
-
 
 
 The ESP Tools are part of the Dumper. To ease administration I decided to link the whole Dumper.
