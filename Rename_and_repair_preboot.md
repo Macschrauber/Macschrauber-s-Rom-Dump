@@ -54,35 +54,35 @@ If the OS cannot boot anymore because of the missing Board ID (prohibition sign 
 
 Screenshots of the cure  
 ___________________
-![1](https://github.com/Macschrauber/Macschrauber-s-Rom-Dump/blob/main/assets/img_Rename_and_repair_preboot/3%20Ventura%20SystemVersion_plist%20mismatch.png)  
-1 Ventura SystemVersion_plist mismatch
+1 Ventura SystemVersion_plist mismatch:<br>
+![1](https://github.com/Macschrauber/Macschrauber-s-Rom-Dump/blob/main/assets/img_Rename_and_repair_preboot/3%20Ventura%20SystemVersion_plist%20mismatch.png)
 ___________________
-![2](https://github.com/Macschrauber/Macschrauber-s-Rom-Dump/blob/main/assets/img_Rename_and_repair_preboot/4%20show%20HS%20sys%20for%20Ventura.png)  
-2 found High Sierra SystemVersion.plist in Ventura Preboot
+2 found High Sierra SystemVersion.plist in Ventura Preboot:<br>
+![2](https://github.com/Macschrauber/Macschrauber-s-Rom-Dump/blob/main/assets/img_Rename_and_repair_preboot/4%20show%20HS%20sys%20for%20Ventura.png)
 ___________________
-![3](https://github.com/Macschrauber/Macschrauber-s-Rom-Dump/blob/main/assets/img_Rename_and_repair_preboot/5%20fix%20it%20sys.png)  
-3 fix SystemVersion.plist?
+3 fix SystemVersion.plist?:<br>
+![3](https://github.com/Macschrauber/Macschrauber-s-Rom-Dump/blob/main/assets/img_Rename_and_repair_preboot/5%20fix%20it%20sys.png)
 ___________________  
-![4](https://github.com/Macschrauber/Macschrauber-s-Rom-Dump/blob/main/assets/img_Rename_and_repair_preboot/6%20fixed.png)  
-4 fixed SystemVersion.plist
+4 fixed SystemVersion.plist:<br>
+![4](https://github.com/Macschrauber/Macschrauber-s-Rom-Dump/blob/main/assets/img_Rename_and_repair_preboot/6%20fixed.png)
 ___________________  
-![5](https://github.com/Macschrauber/Macschrauber-s-Rom-Dump/blob/main/assets/img_Rename_and_repair_preboot/7%20Ventura%20PlatformSupport_plist%20mismatch.png)  
-5 Ventura PlatformSupport_plist mismatch.png
+5 Ventura PlatformSupport_plist mismatch.png:<br>
+![5](https://github.com/Macschrauber/Macschrauber-s-Rom-Dump/blob/main/assets/img_Rename_and_repair_preboot/7%20Ventura%20PlatformSupport_plist%20mismatch.png)
 ___________________  
-![6](https://github.com/Macschrauber/Macschrauber-s-Rom-Dump/blob/main/assets/img_Rename_and_repair_preboot/8%20report%20after%20fix.png)  
-6 the report when the tool is done
+6 the report when the tool is done:<br>
+![6](https://github.com/Macschrauber/Macschrauber-s-Rom-Dump/blob/main/assets/img_Rename_and_repair_preboot/8%20report%20after%20fix.png)
 ___________________  
+7 .contentDetails fix:<br>
 ![7](https://github.com/Macschrauber/Macschrauber-s-Rom-Dump/blob/main/assets/img_Rename_and_repair_preboot/9%20corrected%20contentDetails.png)  
-7 .contentDetails fix
 ___________________  
-![8](https://github.com/Macschrauber/Macschrauber-s-Rom-Dump/blob/main/assets/img_Rename_and_repair_preboot/A%20second%20test.png)  
-8 .contentDetails fixed
+8 2nd readout, now ok:<br>
+![8](https://github.com/Macschrauber/Macschrauber-s-Rom-Dump/blob/main/assets/img_Rename_and_repair_preboot/A%20second%20test.png)
 ___________________  
-![9](https://github.com/Macschrauber/Macschrauber-s-Rom-Dump/blob/main/assets/img_Rename_and_repair_preboot/B%20ventura%20repaired.jpeg)  
-9 Ventura icon and System name are back
+![9](https://github.com/Macschrauber/Macschrauber-s-Rom-Dump/blob/main/assets/img_Rename_and_repair_preboot/B%20ventura%20repaired.jpeg)
+9 Ventura icon and System name are back<br>
 ___________________
-![10](https://github.com/Macschrauber/Macschrauber-s-Rom-Dump/blob/main/assets/img_Rename_and_repair_preboot/C%20Boot%20Picker%20with%20custom%20names.jpeg)  
-10 ESPs were renamed by the ```Label all bootloader ESPs```tool of the Dumper package, names are correct (or adjusted). 
+![10](https://github.com/Macschrauber/Macschrauber-s-Rom-Dump/blob/main/assets/img_Rename_and_repair_preboot/C%20Boot%20Picker%20with%20custom%20names.jpeg)
+10 ESPs were renamed by the ```Label all bootloader ESPs```tool of the Dumper package, names are correct (or adjusted).<br>
 ___________________
 
 <br>
