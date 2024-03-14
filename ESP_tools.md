@@ -23,7 +23,9 @@ what's in?
 - mount ESP from list: shows a list with drive's made, type, interface, physical position
 - mount ESP from list & show bootloader: same as mount ESP from list plus list the bootloader flavor
   
-![1](https://github.com/Macschrauber/Macschrauber-s-Rom-Dump/blob/main/assets/img_ESP_tools/Mount%20ESP%20from%20list%20(Readme%20&%20other%20tools%20-%20ESP%20tools.png)
+![1][(https://github.com/Macschrauber/Macschrauber-s-Rom-Dump/blob/main/assets/img_ESP_tools/Mount%20ESP%20from%20list%20(Readme%20&%20other%20tools%20-%20ESP%20tools.png)]
+
+(https://github.com/Macschrauber/Macschrauber-s-Rom-Dump/blob/main/assets/img_ESP_tools/Mount%20ESP%20from%20list%20(Readme%20&%20other%20tools%20-%20ESP%20tools).png?raw=true)
 
 - Automount ESP with bootloader: Mounts the ESP with the blessed bootloader. Works or not, it depends...
 
