@@ -1,13 +1,14 @@
 ### What is it?
 
-A tool for dumping and flashing the firmware of a Mac Pro 4,1 / 5,1 combined with an analyser of the NVRAM content and the firmware validity.
+A tool for dumping and flashing the firmware of a Mac Pro 4,1 / 5,1 combined with an analyser of the NVRAM content and the firmware validity.  
+Also it can dump and analyse firmwares from the most Macs from around 2006 to 2017.  
 
 <br>
 
 It reads and writes to a ch341a USB programmer as well to work with desoldered flash chips. It detects a connected programmer and installs the libs to communicate with it. 
-  
-Also it can dump and analyse firmwares from the most Macs from around 2006 to 2017.  
 
+<br>
+  
 I added some tools around the Mac administration that I wrote and find useful. Check out the other .md files for them.  
 
 <br>
