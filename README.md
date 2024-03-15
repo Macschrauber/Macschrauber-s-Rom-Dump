@@ -131,13 +131,13 @@ for running RomDump Macschrauber csrutil enable --without kext is enough
 ### Special thanks to:
 
 + flashrom.org for the cli tool communicating with the Mac firmware chip.
-+ tsialex for investigating the Mac bootrom and sharing the information.  
-+ Syncretic for scanvss.  
++ tsialex @ Macrumors for investigating the Mac bootrom and sharing the information.  
++ Syncretic @ Macrumors for scanvss.  
 + LongSoft for UEFIExtract.  
 + joevt for rebuilding DirectHW.kext for all Mac OS versions.  
-+ for help with compiling issues.  
-+ Dayo for assistance with English grammar and spelling, as well as his excellent RefindPlus bootloader.
-+ Takaaki Naganoya@Piyomaru Software for the scrollable dialog "displaytextview"  
++ startergo for help with compiling issues.  
++ dakanji for assistance with English grammar and spelling, as well as his excellent RefindPlus bootloader.
++ Takaaki Naganoya @ Piyomaru Software for the scrollable dialog "displaytextview"  
   
 ———————————————————————————————————————————————
 
