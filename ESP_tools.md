@@ -43,15 +43,12 @@ what's in?
 
 - Label mounted bootloader ESP: Same as Label all bootloader ESPs, but just for the single mounted one
 
-hint: if the rendered name is white on white / black on black then you may set automatic light / dark mode and a system setting is not written. If you once change to dark mode and back to automatic mode this setting is corrected.  
-I just added a button to overwrite that since version 20-2-2024.)
-
 
 <br>
 
 **for identifying the mounted ESPs:**
 - Tag all ESPs: Places a null bytes file in the root of the ESP with drive's made, type, interface, physical position
-- Check ESPs for MS certificates: It checks the ESPs for a bootloader containing Microsoft Uefi Windows certificates
+- Check ESPs for MS certificates: It checks the ESPs for a bootloader containing Microsoft UEFI Windows certificates
 
 <br>
 
@@ -63,13 +60,11 @@ I just added a button to overwrite that since version 20-2-2024.)
 **Preboot fixer and renamer:**
 - Not exactly a ESP tool, this let you rename the Boot Picker entry for the OS. If your entries suddenly change to xyz - data you suffered from High Sierra overwriting Preboot volumes of newer OS.
 In OpenCore you will see a mismatched High Sierra *icon. This is due overwritten SystemVersion.plist. Also invalid board ID / the forbidden sign can happen.
-*This tool also repairs these issues.
 
-   (hint: if the rendered name is white on white / black on black then you may set automatic light / dark mode and a system setting is not written. If you once change to dark mode and back to automatic mode this setting is corrected.*
-I just added a button to overwrite that, this will be in the next release after 17-2-2024.)
+This tool also repairs these issues.
 
 <br>
 
 
-The ESP Tools are part of the Dumper. To ease administration I decided to link the whole Dumper.
+To ease administration, the ESP Tools are part of the Dumper.
 One can find it in /Readme & other tools/ESP Tools/
