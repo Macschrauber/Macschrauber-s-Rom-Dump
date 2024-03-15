@@ -82,10 +82,17 @@ To allow the system to open the Dumper, perform a Ctrl-click on it and select <o
 
 <br>
 
-### If you receive a message indicating that either the app or the disk image (.dmg) is damaged:
+### If you receive a message indicating that either the apps or the disk image (.dmg) is damaged:
+
+These issues arise from the presence of Flashrom in the package, which is flagged as potentially harmful by Mac Os' Gatekeeper and some malware scanners.  
+
   
 If this dialog persists, you can resolve it using Terminal with the following command:  
-```xattr -cr "/path/to/RomDump Macschrauber.app"```
+```
+xattr -cr "/path/to/RomDump Macschrauber.app"
+xattr -cr "/path/to/appname.app"
+```
+
 
 <br>
 
@@ -97,13 +104,7 @@ They also can be flagged, if, do ```xattr -cr "/path/to/the.app"```
 <br>
 
 Use my Github Downloader to obtain a copy with no quarantine flag set:  
-[Link](https://github.com/Macschrauber/Macschrauber-s-Rom-Dump/releases/download/Release/Download.the.Dumper.from.github.app.zip)
-
-in case the Downloader is not included:  
-https://www.dropbox.com/s/t5k7j4gxj8n9pj2/Download%20Macschrauber%27s%20CMP%20Rom%20Dump.zip?dl=1 
-
-
-These issues arise from the presence of Flashrom in the package, which is flagged as potentially harmful by some malware scanners.
+[https://github.com/Macschrauber/Macschrauber-s-Rom-Dump/releases/download/Release/Download.the.Dumper.from.github.app.zip](https://github.com/Macschrauber/Macschrauber-s-Rom-Dump/releases/download/Release/Download.the.Dumper.from.github.app.zip)
 
 ——————————————————
 
