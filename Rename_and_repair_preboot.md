@@ -87,7 +87,7 @@ ___________________
 ___________________
 ![11](https://github.com/Macschrauber/Macschrauber-s-Rom-Dump/blob/main/assets/img_Rename_and_repair_preboot/AA%20show%20preboot.png)
 ![12](https://github.com/Macschrauber/Macschrauber-s-Rom-Dump/blob/main/assets/img_Rename_and_repair_preboot/AB%20rename%20preboot.png)  
-Show and let rename the Preboot rendered name, as appears in the Apple Boot Picker or OpenCore boot menu
+Show and let rename the Preboot rendered name, as appears in the Apple Boot Picker or OpenCore boot menu.
 ___________________
 
 
