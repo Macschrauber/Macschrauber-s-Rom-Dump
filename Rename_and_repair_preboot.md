@@ -1,6 +1,6 @@
 ## Summary
 
-We discovered a serious bug: booting High Sierra without System Integrity Protection (csrutil disable) possibly corrupts another mounted (unsupported) APFS2* OS Preboot volume, even when on another drive.  
+We discovered a serious bug: booting ***High Sierra*** without System Integrity Protection (csrutil disable) possibly corrupts another mounted (unsupported) APFS2* OS Preboot volume, even when on another drive.  
 Consequently, the corrupted OS may appear as High Sierra and check for compatibility with Board IDs compatible with High Sierra, possibly prevents booting.  
 I've created a tool to address this problem.
 
@@ -11,8 +11,9 @@ Screenshots of the issue:
 ![BootPicker](https://github.com/Macschrauber/Macschrauber-s-Rom-Dump/blob/main/assets/img_Rename_and_repair_preboot/1%20ventura%20corrputed%20showing%20high%20sierra%20data.jpeg)
 Ventura with High Sierra icon and data volume name  
 
-![MP7,1BoardID](https://github.com/Macschrauber/Macschrauber-s-Rom-Dump/blob/main/assets/img_Rename_and_repair_preboot/2%20Mac-27AD2F918AE68F61%20MP7,1%20cannot%20boot%20High%20Sierra.jpeg?raw=true)
-Try to boot the newer OS with ```High Sierra's PlatformSupport.plist``` got prevented because Board ID of Mac Pro7,1 is missing, if not spoofless approach.
+![MP7,1BoardID](https://github.com/Macschrauber/Macschrauber-s-Rom-Dump/blob/main/assets/img_Rename_and_repair_preboot/2%20Mac-27AD2F918AE68F61%20MP7,1%20cannot%20boot%20High%20Sierra.jpeg?raw=true)  
+
+Try to boot the newer OS with ```High Sierra's PlatformSupport.plist``` got prevented because Board ID of Mac Pro7,1 is missing, if not on the spoofless approach.
 
 <br>
 
