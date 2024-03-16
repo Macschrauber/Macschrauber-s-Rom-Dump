@@ -2,16 +2,19 @@
 
 commands
 ```
-user$ test_nvram -help
-test_nvram_shell_script 17-Sep-2023
+$test_nvram -help
+test_nvram_shell_script 8-Mar-2024
 takes *.bin, *.rom, *.vol, *.fd and one or more of these arguments:
 -help               this text
 -force              don't check filesize and type
+-freshdump          treat the file like it was just dumped on this machine
 -shortserial        truncate the serial number
 -nointro            do not show version and filename
 -condense_gfxutil   do not show the full path for Bootvars
 -DontCheckVolumes   do not mount or check volumes for bootvar decoding
--showvars           show all NVRAM variables
+-showvars           show all NVRAM VSS variable names
+-vars               show all variables in all NVRAM volume stores as hexdump and text
+-varstextonly       show all variables in all NVRAM volume stores as text
 -mtccounts1         show deleted MTC counts
 -mtccounts2         show MTC count of VSS2
 -mtccounts12        show all MTC counts
@@ -19,6 +22,8 @@ takes *.bin, *.rom, *.vol, *.fd and one or more of these arguments:
 -showlbsn           show LBSN, hwc, son
 -showbathealth      show battery-health variables condensed
 -showfullbathealth  show battery-health variables (gives a hughe report)
+-hexdump            show a hexdump of the variables and certificates that have been read
+-gathernvram.vol    collect the extracted nvram volumes in /Users/svenradke/All_Nvrams
 -rename             ask to rename the given file by machine, serial, firmware, additions
 -forcerename        same as -rename but don't ask
 -simulaterename     same as -forcerename but just write out the new filename
@@ -42,6 +47,7 @@ ________________________________________________________________________________
    '-scanvss -V2'      ...show only VSS2
    '-scanvss -a'       ...show everything, same as -v -g -d
 -freespace          read this machine's NVRAM with scanvss and just print free space of VSS1
+
 ```
 
 <br>
