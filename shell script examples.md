@@ -23,7 +23,7 @@ takes *.bin, *.rom, *.vol, *.fd and one or more of these arguments:
 -showbathealth      show battery-health variables condensed
 -showfullbathealth  show battery-health variables (gives a hughe report)
 -hexdump            show a hexdump of the variables and certificates that have been read
--gathernvram.vol    collect the extracted nvram volumes in /Users/svenradke/All_Nvrams
+-gathernvram.vol    collect the extracted nvram volumes in /Users/user/All_Nvrams
 -rename             ask to rename the given file by machine, serial, firmware, additions
 -forcerename        same as -rename but don't ask
 -simulaterename     same as -forcerename but just write out the new filename
@@ -121,39 +121,55 @@ VSS2 (Formatted) (Healthy), found 40 variables (40 valid)
 dumping with eficheck on a MacBook Air 6,2
 ```
 ~ % test_nvram -dump -chip=eficheck
-...reading /users/user/Downloads/23.07.2023_18-22-32_eficheck_dump.bin
-Password:
-.../users/user/Downloads/23.07.2023_18-22-32_eficheck_dump.bin was created
+...reading the firmware with Eficheck, storing to /users/user/Downloads/16.03.2024_13-22-51_eficheck_dump.bin
+.../users/user/Downloads/16.03.2024_13-22-51_eficheck_dump.bin was created
 
 ===================================================
-test_nvram_shell_script 23-Jul-2023 by Macschrauber
-scanning: /users/user/Downloads/23.07.2023_18-22-32_eficheck_dump.bin
+test_nvram_shell_script 12-Mar-2024 by Macschrauber
+scanning: /users/user/Downloads/16.03.2024_13-22-51_eficheck_dump.bin
 
 8MB file detected, analysing in progress
+nvram.vol position: 0x610000, size: 0x30000, header size: 0x50
+vss1_position: 00610050: 2456 5353       $VSS
+vss2_position: 00620050: 2456 5353       $VSS
+fsys_position: 00630000: 4673 7973       Fsys
+gaid_position: 00630800: 4761 6964       Gaid
+0x610050 first stream start position ok, stored in /tmp/VSS_Store1.bin, length: 0x0000ffb0
+0x620050 second stream start position ok, stored in /tmp/VSS_Store2.bin, length: 0x0000ffb0
+0x630000 Fsys start position ok, header: 060000 000008
+0x630800 Gaid start position ok, header: 060000 000018
 Firmware 478.0.0.0.0 built on Fri Jan 13 17:47:58 PST 2023
 Bios Version: MBA61.88Z.F000.B00.2301131747
-MBA62, Serial from firmware: C17xxxxxxxxxx
+(U)efi version: 1.10
+MBA62, Serial from firmware: C17xxxxxx085
+Macserial reported the serial number seems to be possibly valid
+LBSN: C024xxxxxx5CAE   BD: 14xxxxxxxx25   
 hwc: G085   son: MD760D/
 CRC32 checksums: ok
 Base_18 hardware descriptor
-fmm-computer-name: MacBook Air from user
+Fsys | Gaid headers: 060000 000008 | 060000 000018
+Fsys: 0 overrides, 1 override-version, 2 kcal, 3 ssn, 4 hwc, 5 son, 6 EOF 
+OCLP: 1.3.0 | -allow_fv | MacBookAir6,2
+fmm-computer-name: MacBook Air of xxxx
+boot-args: keepsyms=1 debug=0x100 ipc_control_port_options=0 -nokcmismatchpanic -v
 BootOrder: 1:Boot0080
-Boot0080: \7AFD3F6D-2719-4CA3-B821-FA9B4D74770B\System\Library\CoreServices\boot.efi
-Boot0082: \7AFD3F6D-2719-4CA3-B821-FA9B4D74770B\System\Library\CoreServices\boot.efi
-BootFFFF: \pDZ\A20E739E-78F6-3924-A686-272E77E54C35\System\Library\CoreServices\boot.efi
-15 boots since last garbage collection, MTC counter: 86 - 101
+Boot0080: Mac OS X |Apple_APFS|disk0s2 (PCI Internal:APPLE SSD SM0256F)|\7AFD3F6D-xxxx-4CA3-B821-FA9B4D74770B\System\Library\CoreServices\boot.efi
+Boot0080 is MacOs 11.7.6, label: MBA
+BootFFFF: \A20E739E-xxxx-3924-A686-272E77E54C35\System\Library\CoreServices\boot.efi
+12 boots since last garbage collection, MTC counter: 809 - 821
 VSS1                   VSS2
-1 (1 active)           1 (1 active) Memory Configs g
-1 (1 active)           1 (1 active) Memory Configs h
-1 (1 active)           1 (1 active) Kernel Panic dumps type A: Pointer type (ok)
-0                      0 Microsoft certificates (ok)
-26 (1 active)          42 (1 active) Boot PathProperties0000 (ok)
-11 (1 active)          12 (1 active) NVRAM PathProperties0000 (ok)
-VSS1: found 177 variables (47 valid, 130 deleted)
-VSS2: found 264 variables (50 valid, 214 deleted)
-17785 bytes free space of 65456 in VSS1
-416 bytes free space of 65456 in VSS2
-...renamed: 23.07.2023_18-22-32_eficheck_dump.bin to MBA62_478.0.0.0.0_C17xxxxxxxx_23.07.2023_18-22-32.bin
+1  (1 active)          1  (1 active) Memory Configs g
+1  (1 active)          1  (1 active) Memory Configs h
+1  (1 active)          1  (1 active) Kernel Panic dumps type A: Pointer type (ok)
+0                      0  Microsoft certificates (ok)
+16 (1 active)          45 (1 active) Boot PathProperties0000 (ok)
+4  (1 active)          14 (1 active) NVRAM PathProperties0000 (ok)
+VSS1: found 134 variables (45 valid, 89 deleted)
+VSS2: found 303 variables (49 valid, 254 deleted)
+35031 bytes free space of 65456 in VSS1
+1272 bytes free space of 65456 in VSS2
+...renamed: 16.03.2024_13-22-51_eficheck_dump.bin to MBA62_478.0.0.0.0_C17MLJG8G085_16.03.2024_13-22-51.bin
+...
 ```
 
 <br>
