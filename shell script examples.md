@@ -120,7 +120,7 @@ VSS2 (Formatted) (Healthy), found 40 variables (40 valid)
 
 dumping with eficheck on a MacBook Air 6,2
 ```
-~ % test_nvram -dump -chip:eficheck
+~ % test_nvram -dump -chip=eficheck
 ...reading /users/user/Downloads/23.07.2023_18-22-32_eficheck_dump.bin
 Password:
 .../users/user/Downloads/23.07.2023_18-22-32_eficheck_dump.bin was created
