@@ -1,6 +1,6 @@
 # Installer for using the CLI tools in Terminal
 
-````
+```
  ~ % /Volumes/Macschrauber\'s\ CMP\ Rom\ Dump/Readme\ \&\ other\ tools/Installer\ for\ the\ CLI\ tools\ \(optional\)/install_test_nvram_cli_tool
 =============================================================================
 Installer for Macschrauber's test_nvram CLI command and accompanying tools.
