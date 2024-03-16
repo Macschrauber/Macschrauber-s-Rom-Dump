@@ -125,11 +125,13 @@ APFS2: APFS Systems with a separated system and data volume
 
 
 <br>
+
 I placed the tools in my firmware dumper package to ease administration.
 They can be found in the ```Readme & other tools``` folder.  
 Using the Dumper to check and backup the bootrom is a good practice for all Macs, but that's another topic ;-)  
 
 
 <br>
+
 link to the Macrumors Dumper post:  
 https://forums.macrumors.com/threads/healthy-nvram-normal-behaviour-on-4-1-5-1-machines.2333460/page-4?post=32055801#post-32055801
