@@ -44,7 +44,7 @@ ________________________________________________________________________________
 -freespace          read this machine's NVRAM with scanvss and just print free space of VSS1
 ```
 
-
+<br>
 
 just freespace in VSS1
 ```
@@ -52,7 +52,7 @@ user$ test_nvram -freespace
 Apparent free space in VSS1: 27668 bytes
 ```
 
-
+<br>
 
 dumping with Flashrom on a Mac Pro 5,1
 ```
@@ -110,7 +110,7 @@ VSS2 (Formatted) (Healthy), found 40 variables (40 valid)
 ...renamed: /users/user/Downloads/18.09.2023_21-33-13_MX25L3205D_dump.log to /users/user/Downloads/MP51_144.0.0.0.0_CKxxxxxxxxEUG_EnableGop_1.3_18.09.2023_21-33-13.log
 ```
 
-
+<br>
 
 dumping with eficheck on a MacBook Air 6,2
 ```
@@ -150,6 +150,7 @@ VSS2: found 264 variables (50 valid, 214 deleted)
 ...renamed: 23.07.2023_18-22-32_eficheck_dump.bin to MBA62_478.0.0.0.0_C17xxxxxxxx_23.07.2023_18-22-32.bin
 ```
 
+<br>
 
 full check with the cli tool:
 ```
@@ -333,6 +334,8 @@ all variables in VSS2:
 1 62bf9b1c-8568-48ee-85dc-dd3057660863:boot-feature-usage (Normal)
 ```
 
+<br>
+
 running Syncretic's ScanVSS
 ```
 test_nvram bbs.bin '-scanvss -a'
@@ -406,7 +409,7 @@ Data:
 ...
 ```
 
-
+<br>
 
 Examples test_nvram shell script 18-11-2023
 Hardware-Descriptor (base_xx)
@@ -565,6 +568,8 @@ override-version
 Base_21
 ===================================================================
 ```
+
+<br>
 
 IASInstallPhaseList
 ```
