@@ -1,0 +1,396 @@
+Update from 10-3-2024
+
+-> adding a line when OpenCore is running during storing the dump
+
+-> showing MP41 or MP51 backplane type and generation
+
+-> checking Fsys for missing items or wrong order
+sometimes they get into the wrong order or items are missing, leading to problems with machine identification
+example: [ICODE]Fsys: 0 overrides, 1 override-version, 2 ssn, 3 EOF (son, hwc is missing)[/ICODE]
+
+-> one Dialog with up to 4 buttons, scrollable analyze dialog
+10.7-10.9 still has the classic look, 10.10 to Catalina horizontal buttons, Big Sur to Sonoma vertical buttons
+
+-> LBSN check for wrong jump points after MP4,1 -> MP5,1 manual conversion and v. v. 
+If someone tries to inject a Mac Pro 4,1 LBSN/BD sector into a Mac Pro 5,1 firmware the Dumper informs and stops before flashing this gives a brick. Also vice versa, if someone downgrades a Mac Pro 5,1 to Mac Pro 4,1 incorrectly.
+
+-> The ESP / Preboot Tools were polished
+
+-> Additional conditions for missing user privileges
+
+-> more logging / progress bar information
+
+-> technically invalid serial numbers are reported
+
+-> some bugs were fixed, ESP Label works for UEFI Windows,
+
+the Dumper had a bug in V4-2-2024 what prevented starting in 10.9 to 10.7, some ESP Tools were also fixed for working in those earlier OS'.
+
+Also fixed a bug, stopping the script when using the CH341a programmer with a misnamed variable.
+
+In V2-3-2024 a glitch was fixed when the font "Courier New" was missing it prevents displaying the analyse dialog.
+
+In V10-3-2024 fixed checking a file with unsupported file size resulted in a script error, that error come with V2-3-2024.
+
+
+
+
+
+
+
+Update from 23-1-2024
+
+-> Dumps and logfiles get their own folder for every dump
+Like ~/Downloads/Macschrauber's Rom Dump 23.01.2024_00-43-43/
+
+silently changed it, as the Dumper could be used to test dumps or to flash, so the previous folder naming was not accurate
+
+-> Revisited most of the ESP Tools and done a new tool: Preboot fixer and renamer 
+This is for the mess unprotected High Sierra boots does with Catalina and newer.
+It can also be used to just rename the icons shown in Boot Picker and OpenCore. Even with multiple lines.
+Thanks to [USER=710085]@joevt[/USER], here for all the the help and with building the icons.
+High-sierra-booting-possibly-corrupts-newer-systems-fix-and-description
+
+
+
+
+
+
+Update from 23-12-2023
+
+-> showing firmware programming mode [  ] [off] [on]
+The Dumper checks for firmware programming mode on compatible units (MacPro 4,1/5,1). It does this during reading/flashing or directly, when the password is stored encrypted by a CLI tool in the Other Tools folder.
+
+(Firmware programming mode is initiated by pressing the power button until a long tone and blinking power LED appear when starting the box.)
+
+I don't want the user to give access to the keychain or to bother him with passwords before the Dumper initiates any visible actions.
+
+[SPOILER="Firmware programming mode / admin password storage"]
+firmware programming mode on.png
+admin password.png
+[/SPOILER]
+
+-> Wrapped the Dumper into a loop, does not end directly after flashing / dumping.
+
+Fixes:
+- if the user's Downloads folder is not available it prompts for another
+- The scanvss log filename had the spoofed firmware version in, now it's the real firmware version
+
+
+
+
+
+
+Update from 10-12-2023
+
+-> detecting Nvidia Chipsets to report long readout duration
+Macs with Nvidia chipsets (MCP79 / MCP89 built around 2009) could take about 5 minutes to read the firmware
+
+-> Multiple flash chip definitions for dumping with the shell script
+it prompts for the chip of a Mac whose spi data is not captured (yet) if Flashrom returns more than one type
+
+-> checking Bootblock vectors for rebuilds, showing Fsys header type after base_xx
+
+-> emergency stop if one tries to flash a firmware from another Mac model in a MP 4,1/5,1
+exits if the pre-flashing information readout is ignored
+
+-> reading MBP54 and MBP91, updated some chip definitions for other models
+
+-> added a copy ESP script to the ESP tools
+Post in thread 'Manually Configured OpenCore on the Mac Pro'
+
+
+
+
+
+
+Update from 18-11-2023
+
+-> -vars argument to the shell script
+Displays all variables of the nvram stream, including Fsys, Gaid, VSS1, VSS2, SVS1, SVS2. Plain text displaying of the hardware descriptor (base_xx text), IASInstallPhaseList, and the LBSN / BD sector.
+
+But never post such a detailed dump to public sources. The dump, and the big report contains loads of personal and machine data. So again: never, ever post that shell script report!
+
+-> -hexdump argument to the shell script
+Displays the most important variables and checks the checksums for post-2012 firmwares.
+
+-> Dynamically finding the lbsn sector, displaying the hexdump of it in the shell script.
+
+-> iCloud lock detection, displaying the stored text shown to the finder in the CLI tool
+
+-> More details for Microsoft Windows certificates
+
+-> MacBook Pro 8,1 dumping. Mac Pro 6.1 got a 2nd spi flash chip type.
+
+-> Scanvss log files for "Scanvss semi-compatible" firmwares
+Some firmwares could not be decoded by Scanvss if the whole dump is given, but the extracted NVRAM Volume.
+
+-> rename Preboot
+A little script to rename .contentDetails of a Preboot APFS Volume. Sometimes the Names are not updated and the script allows you to rename the name a bootloader shows.
+
+
+Fixes:
+- Battery-health for type 00 firmwares is working.
+
+
+
+
+
+
+Update from 22-10-2023
+
+-> Find my Mac detection
+The dumper provides information that Find my Mac is activated. This can be important when buying a used device.
+Only the shell script provides the configured text output from a Find my Mac lock. Since these texts often contain private data such as phone numbers or email addresses, there is no output in the dumper.
+
+-> The collection of changing NVRAM states is supported.
+You can either add your Shasum encrypted serial number to the shell script or provide an argument
+[ICODE]-gathernvram.vol[/ICODE]. If that argument is given, or you added the encoded serial number of your Mac to the shell script, the Dumper stores (to spare storage space) just the NVRAM volume of the dump to a pre configured folder "All_Nvrams" in your home folder.
+
+fixes:
+- Some newer Macs' firmware (approximately from 2013 onwards) have a variable of the old (up to around 2013) type 00. I have revised the detection logic to avoid incorrect classification.
+
+
+
+
+
+
+Update from 12-10-2023
+
+-> NVRAM Volume Detection:
+  The shell script dynamically identifies the NVRAM volume position and offsets. In theory, this means that all Mac Firmwares could be decoded.
+-> Dumping Mac Mini 7,1 for the Dumper and shell script
+-> ESP Tools: Added a script to automatically label ESPs for the boot picker based on the found bootloader flavor
+
+fixes:
+- An error occurred when running Yosemite, and the absence of bootarg: kext-dev-mode=1 prevented the loading of DirectHW.kext, leading to a missing variable.
+- An older OS like Yosemite truncated the firmware version, causing the shell script to display a spoofed firmware.
+- A glitch related to logging prevented the selection of multiple found flash chips on untested Macs.
+
+
+
+
+
+
+Update from 8-10-2023
+
+-> showing the OpenCore spoofed firmware string (only for fresh dumps possible)
+-> counting Microsoft Uefi variables
+-> dumping: iMac 11,1, iMac 11,2
+-> added a tool to rename ESPs (bootloaders like OC) shown in the boot picker
+
+details: https://forums.macrumors.com/threads/manually-configured-opencore-on-the-mac-pro.2207814/page-520?post=32382081#post-32382081
+
+analyzing MBP61, MBP62, IM112, IM113 to shell script
+
+workaround for deeper analysing units with Scanvss where Scanvss could not scan the dump file directly:
+        IM112, IM113, IM121, MBP61, MBP62, MBP81, MBP82, MBA41, MBA42, MM51
+
+fixed: infinite loop in the shell script / the Dumper for units with less than 6 NVRAM variables of type (AA.55.7F.00.07)
+
+
+
+
+
+
+Update from 17-9-2023
+
+-> detection for refurbished boards (ssnp present), shows a warning if not serialised (ssnp but no ssn)
+-> reporting of u(efi) version where possible and adjust the warning for Windows certificates
+-> -scanvss and -freespace arguments for the test_nvram shell script
+
+-> fixed: Model code was not shown before serial number in GUI tool
+
+
+
+
+
+
+Update from 31-8-2023
+
+-> Fixed a bug where flashing was rejected
+-> The ESP tools got a <mount ESP from list v2> tool
+what shows the drive model, interface, position and last but not least the type / version (where possible) of the bootloader (OpenCore native, OCLP, OC MartinLo, RefindPlus, rEFInd, Windows, ...)
+
+[URL unfurl="true"]https://forums.macrumors.com/threads/manually-configured-opencore-on-the-mac-pro.2207814/page-520?post=32382081#post-32382081[/URL]
+
+
+
+
+
+
+Update from 27-8-2023
+
+-> No real new functions, polishing and error corrections.
+-> The ESP tools work in old systems what do not work with diskutil to mount / unmount
+-> Added a bunch of scripts to add and edit boot-args
+
+
+
+
+
+
+Update from 12-8-2023
+-> Bootvars show where the System / Bootloader / Recovery / ... is physically stored.
+
+Gives, when possible, the actual path, the product name of the drive and the position.
+
+Like: Boot001: OpenCore |EFI|disk0s1 (PCI External:APPLE SSD SM0256G) /EFI/OC/OpenCore.efi
+
+Bootvars with physical positions.png
+
+some more examples:
+[CODE]
+BootOrder: 1:Boot0080
+Boot0001: OpenCore |EFI|disk3s1 (SATA Bay 3:ST1000DM003-1ER162)|EFI|EFI\OC_OCLP031\OpenCore.efi
+Boot0080: Mac OS X |Apple_APFS|disk2s2 (SATA Bay 1:Samsung SSD 850 PRO 256GB)|\x-EC79-4675-96B4-786E627FCA06\System\Library\CoreServices\boot.efi
+Boot0080 is MacOs 10.14.6, label: Mojave
+Boot0081: Recovery OS \x-98B6-49D7-9BAF-0E6A2928C527\boot.efi
+Boot0082: |Apple_APFS|disk2s2 (SATA Bay 1:Samsung SSD 850 PRO 256GB)|\x-EC79-4675-96B4-786E627FCA06\System\Library\CoreServices\boot.efi
+Boot0082 is MacOs 10.14.6, label: Mojave
+BootFFFF: |EFI|disk3s1 (SATA Bay 3:ST1000DM003-1ER162)|EFI|\EFI\BOOT\BOOTX64.efi
+OCBtOrder: 1:OCBt0080
+OCBt0080: Mac OS X [USB] \x-9D33-4C33-86EE-B3C893C0C765\System\Library\CoreServices\boot.efi
+OCBt0081: Mac OS X \x-66D5-4532-99D9-7711AAE353F5\System\Library\CoreServices\boot.efi
+[/CODE]
+
+credits to [USER=710085]@joevt[/USER] for the dumpbootvars scripts, where some code is adapted from.
+where DiskUUIDs are stored in the bootvars it is possible to show this details. Not all bootvars contain this.
+
+For us it is very handy to show where the OpenCore bootloader is.
+
+I wrote a little more about what reading the bootvars gives to us in https://forums.macrumors.com/threads/manually-configured-opencore-on-the-mac-pro.2207814/post-32378414
+
+
+
+
+
+
+Update from 3-8-2023
+-> Reading out battery-health variable on compatible MacBooks plus a history, read from the deleted variables. So we can track the battery-health a little. I could need help to understand more of the values. Not all battery types / machines generate timestamps.
+
+(the battery-health is also displayed in the GUI tool, CLI tool output is better to display)
+[SPOILER="battery-health in CLI tool"]
+
+[CODE]
+$ test_nvram MBA61.88Z.F000.B00.2301131747_N25Q064_10.07.2023_10-00-08.bin -showbathealth
+===================================================
+test_nvram_shell_script 1-Aug-2023 by Macschrauber
+scanning: MBA61.88Z.F000.B00.2301131747_N25Q064_10.07.2023_10-00-08.bin
+
+8MB file detected, analysing in progress
+Firmware 478.0.0.0.0 built on Fri Jan 13 17:47:58 PST 2023
+Bios Version: MBA61.88Z.F000.B00.2301131747
+MBA62, Serial from firmware: xxxxxxxxxxxx85
+hwc: G085   son: MD760D/
+CRC32 checksums: ok
+Battery-Health (VSS1, normal):
+"seed1":6758
+"seed0":6758
+"fccDaySampleAvg":6658
+"version":65536
+"Battery Service State":0
+"waitFc":0
+"nccAvg":6668
+"fccDaySampleAvgAlt":6658
+"nccAvgAlt":6668
+"ncc":94
+"fccDaySampleCount":2
+"Maximum Capacity Percent":97
+"seedTs":1682957818
+"Battery Service Flags":3
+"Battery Serial":"xxxxxxxxxxxxxxxx"
+"ts":1688974424
+"fccAvgHistoryCount":10
+"tsPrev":1688664656
+"nccAlt":94
+------------------------------------------
+battery-health (VSS1, normal):        "Maximum Capacity Percent": 97   ts:  10.07.2023 09:33:44  tsPrev:  06.07.2023 19:30:56  seedTs:  01.05.2023 18:16:58
+battery-health (VSS2, normal):        "Maximum Capacity Percent": 97   ts:  30.06.2023 08:15:01  tsPrev:  28.06.2023 10:15:01  seedTs:  01.05.2023 18:16:58
+battery-health (VSS2, deleted) (1):   "Maximum Capacity Percent": 99   ts:  28.04.2023 20:05:40                                seedTs:  28.04.2023 20:05:40
+battery-health (VSS2, deleted) (2):   "Maximum Capacity Percent": 99   ts:  28.04.2023 20:05:40                                seedTs:  28.04.2023 20:05:40
+battery-health (VSS2, deleted) (3):   "Maximum Capacity Percent": 99   ts:  28.04.2023 20:05:40                                seedTs:  28.04.2023 20:05:40
+battery-health (VSS2, deleted) (4):   "Maximum Capacity Percent": 99   ts:  28.04.2023 20:05:40                                seedTs:  28.04.2023 20:05:40
+battery-health (VSS2, deleted) (5):   "Maximum Capacity Percent": 99   ts:  28.04.2023 20:05:40                                seedTs:  28.04.2023 20:05:40
+battery-health (VSS2, deleted) (6):   "Maximum Capacity Percent": 98   ts:  01.05.2023 18:16:58  tsPrev:  28.04.2023 20:05:40  seedTs:  01.05.2023 18:16:58
+battery-health (VSS2, deleted) (7):   "Maximum Capacity Percent": 98   ts:  24.06.2023 14:18:06  tsPrev:  01.05.2023 18:16:58  seedTs:  01.05.2023 18:16:58
+battery-health (VSS2, deleted) (8):   "Maximum Capacity Percent": 98   ts:  24.06.2023 14:18:06  tsPrev:  01.05.2023 18:16:58  seedTs:  01.05.2023 18:16:58
+battery-health (VSS2, deleted) (9):   "Maximum Capacity Percent": 98   ts:  24.06.2023 14:18:06  tsPrev:  01.05.2023 18:16:58  seedTs:  01.05.2023 18:16:58
+battery-health (VSS2, deleted) (10):  "Maximum Capacity Percent": 98   ts:  26.06.2023 12:15:01  tsPrev:  24.06.2023 14:18:06  seedTs:  01.05.2023 18:16:58
+battery-health (VSS2, deleted) (11):  "Maximum Capacity Percent": 98   ts:  26.06.2023 12:15:01  tsPrev:  24.06.2023 14:18:06  seedTs:  01.05.2023 18:16:58
+battery-health (VSS2, deleted) (12):  "Maximum Capacity Percent": 97   ts:  28.06.2023 10:15:01  tsPrev:  26.06.2023 12:15:01  seedTs:  01.05.2023 18:16:58
+battery-health (VSS2, deleted) (13):  "Maximum Capacity Percent": 97   ts:  28.06.2023 10:15:01  tsPrev:  26.06.2023 12:15:01  seedTs:  01.05.2023 18:16:58
+battery-health (VSS1, deleted) (1):   "Maximum Capacity Percent": 97   ts:  30.06.2023 08:15:01  tsPrev:  28.06.2023 10:15:01  seedTs:  01.05.2023 18:16:58
+battery-health (VSS1, deleted) (2):   "Maximum Capacity Percent": 97   ts:  30.06.2023 08:15:01  tsPrev:  28.06.2023 10:15:01  seedTs:  01.05.2023 18:16:58
+battery-health (VSS1, deleted) (3):   "Maximum Capacity Percent": 97   ts:  02.07.2023 06:15:01  tsPrev:  30.06.2023 08:15:01  seedTs:  01.05.2023 18:16:58
+battery-health (VSS1, deleted) (4):   "Maximum Capacity Percent": 97   ts:  02.07.2023 06:15:01  tsPrev:  30.06.2023 08:15:01  seedTs:  01.05.2023 18:16:58
+battery-health (VSS1, deleted) (5):   "Maximum Capacity Percent": 97   ts:  04.07.2023 04:15:01  tsPrev:  02.07.2023 06:15:01  seedTs:  01.05.2023 18:16:58
+battery-health (VSS1, deleted) (6):   "Maximum Capacity Percent": 97   ts:  04.07.2023 04:15:01  tsPrev:  02.07.2023 06:15:01  seedTs:  01.05.2023 18:16:58
+battery-health (VSS1, deleted) (7):   "Maximum Capacity Percent": 97   ts:  04.07.2023 04:15:01  tsPrev:  02.07.2023 06:15:01  seedTs:  01.05.2023 18:16:58
+battery-health (VSS1, deleted) (8):   "Maximum Capacity Percent": 97   ts:  04.07.2023 04:15:01  tsPrev:  02.07.2023 06:15:01  seedTs:  01.05.2023 18:16:58
+battery-health (VSS1, deleted) (9):   "Maximum Capacity Percent": 97   ts:  04.07.2023 04:15:01  tsPrev:  02.07.2023 06:15:01  seedTs:  01.05.2023 18:16:58
+battery-health (VSS1, deleted) (10):  "Maximum Capacity Percent": 97   ts:  04.07.2023 04:15:01  tsPrev:  02.07.2023 06:15:01  seedTs:  01.05.2023 18:16:58
+battery-health (VSS1, deleted) (11):  "Maximum Capacity Percent": 97   ts:  04.07.2023 04:15:01  tsPrev:  02.07.2023 06:15:01  seedTs:  01.05.2023 18:16:58
+battery-health (VSS1, deleted) (12):  "Maximum Capacity Percent": 97   ts:  04.07.2023 04:15:01  tsPrev:  02.07.2023 06:15:01  seedTs:  01.05.2023 18:16:58
+battery-health (VSS1, deleted) (13):  "Maximum Capacity Percent": 97   ts:  04.07.2023 04:15:01  tsPrev:  02.07.2023 06:15:01  seedTs:  01.05.2023 18:16:58
+battery-health (VSS1, deleted) (14):  "Maximum Capacity Percent": 97   ts:  04.07.2023 04:15:01  tsPrev:  02.07.2023 06:15:01  seedTs:  01.05.2023 18:16:58
+battery-health (VSS1, deleted) (15):  "Maximum Capacity Percent": 97   ts:  04.07.2023 04:15:01  tsPrev:  02.07.2023 06:15:01  seedTs:  01.05.2023 18:16:58
+battery-health (VSS1, deleted) (16):  "Maximum Capacity Percent": 97   ts:  04.07.2023 04:15:01  tsPrev:  02.07.2023 06:15:01  seedTs:  01.05.2023 18:16:58
+battery-health (VSS1, deleted) (17):  "Maximum Capacity Percent": 97   ts:  04.07.2023 04:15:01  tsPrev:  02.07.2023 06:15:01  seedTs:  01.05.2023 18:16:58
+battery-health (VSS1, deleted) (18):  "Maximum Capacity Percent": 97   ts:  04.07.2023 04:15:01  tsPrev:  02.07.2023 06:15:01  seedTs:  01.05.2023 18:16:58
+battery-health (VSS1, deleted) (19):  "Maximum Capacity Percent": 97   ts:  04.07.2023 04:15:01  tsPrev:  02.07.2023 06:15:01  seedTs:  01.05.2023 18:16:58
+battery-health (VSS1, deleted) (20):  "Maximum Capacity Percent": 97   ts:  05.07.2023 07:45:54  tsPrev:  04.07.2023 04:15:01  seedTs:  01.05.2023 18:16:58
+battery-health (VSS1, deleted) (21):  "Maximum Capacity Percent": 97   ts:  06.07.2023 19:30:56  tsPrev:  05.07.2023 07:45:54  seedTs:  01.05.2023 18:16:58
+battery-health (VSS1, deleted) (22):  "Maximum Capacity Percent": 97   ts:  06.07.2023 19:30:56  tsPrev:  05.07.2023 07:45:54  seedTs:  01.05.2023 18:16:58
+battery-health (VSS1, deleted) (23):  "Maximum Capacity Percent": 97   ts:  06.07.2023 19:30:56  tsPrev:  05.07.2023 07:45:54  seedTs:  01.05.2023 18:16:58
+battery-health (VSS1, deleted) (24):  "Maximum Capacity Percent": 97   ts:  06.07.2023 19:30:56  tsPrev:  05.07.2023 07:45:54  seedTs:  01.05.2023 18:16:58
+battery-health (VSS1, deleted) (25):  "Maximum Capacity Percent": 97   ts:  06.07.2023 19:30:56  tsPrev:  05.07.2023 07:45:54  seedTs:  01.05.2023 18:16:58
+battery-health (VSS1, deleted) (26):  "Maximum Capacity Percent": 97   ts:  06.07.2023 19:30:56  tsPrev:  05.07.2023 07:45:54  seedTs:  01.05.2023 18:16:58
+battery-health (VSS1, deleted) (27):  "Maximum Capacity Percent": 97   ts:  06.07.2023 19:30:56  tsPrev:  05.07.2023 07:45:54  seedTs:  01.05.2023 18:16:58
+battery-health (VSS1, deleted) (28):  "Maximum Capacity Percent": 97   ts:  06.07.2023 19:30:56  tsPrev:  05.07.2023 07:45:54  seedTs:  01.05.2023 18:16:58
+battery-health (VSS1, deleted) (29):  "Maximum Capacity Percent": 97   ts:  06.07.2023 19:30:56  tsPrev:  05.07.2023 07:45:54  seedTs:  01.05.2023 18:16:58
+battery-health (VSS1, deleted) (30):  "Maximum Capacity Percent": 97   ts:  06.07.2023 19:30:56  tsPrev:  05.07.2023 07:45:54  seedTs:  01.05.2023 18:16:58
+battery-health (VSS1, deleted) (31):  "Maximum Capacity Percent": 97   ts:  10.07.2023 09:33:44  tsPrev:  06.07.2023 19:30:56  seedTs:  01.05.2023 18:16:58
+Base_18 hardware descriptor
+fmm-computer-name: MacBook Air
+BootOrder: 1:Boot0080
+Boot0080: \pDZ\A20E739E-78F6-3924-A686-272E77E54C35\System\Library\CoreServices\boot.efi
+Boot0081: unknown
+Boot0082: \pDZ\A20E739E-78F6-3924-A686-272E77E54C35\System\Library\CoreServices\boot.efi
+BootFFFF: \System\Library\CoreServices\boot.efi
+15 boots since last garbage collection, MTC counter: 29 - 44
+VSS1                   VSS2
+1 (1 active)           1 (1 active) Memory Configs g
+1 (1 active)           1 (1 active) Memory Configs h
+1                      0 fmm-mobileme-token-FMM (ok)
+0                      0 Microsoft certificates (ok)
+29 (1 active)          18 (1 active) Boot PathProperties0000 (ok)
+11 (1 active)          12 (1 active) NVRAM PathProperties0000 (ok)
+VSS1: found 241 variables (51 valid, 190 deleted)
+VSS2: found 337 variables (49 valid, 288 deleted)
+1554 bytes free space of 65456 in VSS1
+1381 bytes free space of 65456 in VSS2
+(Garbage collection should automatically run the next time you reboot.)
+[/CODE]
+
+
+-> So added back and forward buttons to the analyse dialog as these get bigger with displaying battery-health.
+
+-> compatible machines dump with eficheck if Flashrom is not working
+
+-> the repair script for cleaning the xattr quarantine flag
+
+
+CLI tool:
+-> the CLI tool can dump with Flashrom. For those machines we know the spi chip versions it assumes the correct type. Not that rich probing as the GUI tool but it works.
+
+(the spi chip type can still be handed over by the -chip:xyz argument)
+
+-> Also the CLI tool dumps with Eficheck (for compatible units, not Mac Pro 4,1/5,1). This will not need S.I.P. disabled (for the DirectHW.kext)
+
+
+so there is a little installer script for deploying the shell script and the used tools. This is optional, the Dumper works like before. With this shell script things can be automated, like checking the NVRAM free space after every reboot.
+
+Take care to keep the serials and IDs very private, it could be a serious security issue publishing them.
+
+-> some more polishing and corrections in the shell script
