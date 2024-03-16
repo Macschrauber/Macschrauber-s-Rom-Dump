@@ -45,7 +45,7 @@ Bios Version: MP51.88Z.F000.B00.1904121248
 MP41, Serial from firmware: 3Txxxxxxxxxxx  
 Macserial reported the serial number seems to be possibly valid  
 MP41 backplane made in 2009  
-LBSN: J59xxxxxx1LTC   BD: 0904xx0904xx   LBSN sector of MP51  
+LBSN: J59xxxxxx1LTC   BD: xx04xxxx04xx   LBSN sector of MP51  
 hwc: 9MD   son: 625-9217  
 CRC32 checksums: ok  
 Bootblock version: AAPLEFI1.88Z.0005.I00.1904121247  
@@ -55,8 +55,8 @@ Fsys | Gaid headers: 080000 000008 | 080000 000018
 Fsys: 0 override-version, 1 overrides, 2 ssn, 3 hwc, 4 son, 5 EOF (ok)  
 fmm-computer-name: xxx Mac Pro  
 BootOrder: 1:Boot0080  
-Boot0080: Mac OS X PciRoot(0x0)/Pci(0x3,0x0)/Pci(0x0,0x0)/SasEx(0x01000000,0x00253856,0xDF5F,0xB181,0,0,0)/HD(2,GPT,066DD320-EF61-449D-88CB-48B603A295E1,0x64028,0x1D161920)/VenMedia(BE74FCF7-0B7C-49F3-9147-01F4042E6842,25188281F5051E4F83CD2563D5B62E7C)/\41651A92-2BE3-4950-A503-8C39B4859C2F\System\Library\CoreServices\boot.efi  
-BootFFFF: PciRoot(0x0)/Pci(0x1F,0x2)/Sata(0x4,0x0,0x0)/HD(2,GPT,FFE4FF73-7834-4969-B1F5-1ACC09BEF3D5,0x64028,0x746A2D60)/VenMedia(BE74FCF7-0B7C-49F3-9147-01F4042E6842,5C66853E1A247A4DA378F5D95F5F72CA)/\809DFFD4-3B75-4ED6-AD2D-7F3D999488F1\System\Library\CoreServices\boot.efi  
+Boot0080: Mac OS X PciRoot(0x0)/Pci(0x3,0x0)/Pci(0x0,0x0)/SasEx(0x01000000,0x00253856,0xDF5F,0xB181,0,0,0)/HD(2,GPT,066DD320-xxxx-449D-88CB-48B603A295E1,0x64028,0x1D161920)/VenMedia(BE74FCF7-xxxx-49F3-9147-01F4042E6842,25188281F5051E4F83CD2563D5B62E7C)/\41651A92-xxxx-4950-A503-8C39B4859C2F\System\Library\CoreServices\boot.efi  
+BootFFFF: PciRoot(0x0)/Pci(0x1F,0x2)/Sata(0x4,0x0,0x0)/HD(2,GPT,FFE4FF73-xxxx-4969-B1F5-1ACC09BEF3D5,0x64028,0x746A2D60)/VenMedia(BE74FCF7-xxxx-49F3-9147-01F4042E6842,5C66853E1A247A4DA378F5D95F5F72CA)/\809DFFD4-xxxx-4ED6-AD2D-7F3D999488F1\System\Library\CoreServices\boot.efi  
 2 boots since last garbage collection, MTC counter: 1 - 3  
 3  (1 active) Memory Configs g (ok)  
 3  (1 active) Memory Configs h (ok)  
