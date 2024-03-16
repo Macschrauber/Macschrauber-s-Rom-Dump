@@ -85,6 +85,11 @@ ___________________
 ![10](https://github.com/Macschrauber/Macschrauber-s-Rom-Dump/blob/main/assets/img_Rename_and_repair_preboot/C%20Boot%20Picker%20with%20custom%20names.jpeg)
 10 ESPs were renamed by the ```Label all bootloader ESPs```tool of the Dumper package, names are correct (or adjusted).<br>
 ___________________
+![11](https://github.com/Macschrauber/Macschrauber-s-Rom-Dump/blob/main/assets/img_Rename_and_repair_preboot/AA%20show%20preboot.png)
+Show the Preboot name
+___________________
+
+
 
 <br>
 
