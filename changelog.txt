@@ -65,11 +65,6 @@ The Dumper checks for firmware programming mode on compatible units (MacPro 4,1/
 
 I don't want the user to give access to the keychain or to bother him with passwords before the Dumper initiates any visible actions.
 
-[SPOILER="Firmware programming mode / admin password storage"]
-firmware programming mode on.png
-admin password.png
-[/SPOILER]
-
 -> Wrapped the Dumper into a loop, does not end directly after flashing / dumping.
 
 Fixes:
@@ -237,7 +232,6 @@ Gives, when possible, the actual path, the product name of the drive and the pos
 
 Like: Boot001: OpenCore |EFI|disk0s1 (PCI External:APPLE SSD SM0256G) /EFI/OC/OpenCore.efi
 
-Bootvars with physical positions.png
 
 some more examples:
 [CODE]
@@ -270,108 +264,6 @@ Update from 3-8-2023
 -> Reading out battery-health variable on compatible MacBooks plus a history, read from the deleted variables. So we can track the battery-health a little. I could need help to understand more of the values. Not all battery types / machines generate timestamps.
 
 (the battery-health is also displayed in the GUI tool, CLI tool output is better to display)
-[SPOILER="battery-health in CLI tool"]
-
-[CODE]
-$ test_nvram MBA61.88Z.F000.B00.2301131747_N25Q064_10.07.2023_10-00-08.bin -showbathealth
-===================================================
-test_nvram_shell_script 1-Aug-2023 by Macschrauber
-scanning: MBA61.88Z.F000.B00.2301131747_N25Q064_10.07.2023_10-00-08.bin
-
-8MB file detected, analysing in progress
-Firmware 478.0.0.0.0 built on Fri Jan 13 17:47:58 PST 2023
-Bios Version: MBA61.88Z.F000.B00.2301131747
-MBA62, Serial from firmware: xxxxxxxxxxxx85
-hwc: G085   son: MD760D/
-CRC32 checksums: ok
-Battery-Health (VSS1, normal):
-"seed1":6758
-"seed0":6758
-"fccDaySampleAvg":6658
-"version":65536
-"Battery Service State":0
-"waitFc":0
-"nccAvg":6668
-"fccDaySampleAvgAlt":6658
-"nccAvgAlt":6668
-"ncc":94
-"fccDaySampleCount":2
-"Maximum Capacity Percent":97
-"seedTs":1682957818
-"Battery Service Flags":3
-"Battery Serial":"xxxxxxxxxxxxxxxx"
-"ts":1688974424
-"fccAvgHistoryCount":10
-"tsPrev":1688664656
-"nccAlt":94
-------------------------------------------
-battery-health (VSS1, normal):        "Maximum Capacity Percent": 97   ts:  10.07.2023 09:33:44  tsPrev:  06.07.2023 19:30:56  seedTs:  01.05.2023 18:16:58
-battery-health (VSS2, normal):        "Maximum Capacity Percent": 97   ts:  30.06.2023 08:15:01  tsPrev:  28.06.2023 10:15:01  seedTs:  01.05.2023 18:16:58
-battery-health (VSS2, deleted) (1):   "Maximum Capacity Percent": 99   ts:  28.04.2023 20:05:40                                seedTs:  28.04.2023 20:05:40
-battery-health (VSS2, deleted) (2):   "Maximum Capacity Percent": 99   ts:  28.04.2023 20:05:40                                seedTs:  28.04.2023 20:05:40
-battery-health (VSS2, deleted) (3):   "Maximum Capacity Percent": 99   ts:  28.04.2023 20:05:40                                seedTs:  28.04.2023 20:05:40
-battery-health (VSS2, deleted) (4):   "Maximum Capacity Percent": 99   ts:  28.04.2023 20:05:40                                seedTs:  28.04.2023 20:05:40
-battery-health (VSS2, deleted) (5):   "Maximum Capacity Percent": 99   ts:  28.04.2023 20:05:40                                seedTs:  28.04.2023 20:05:40
-battery-health (VSS2, deleted) (6):   "Maximum Capacity Percent": 98   ts:  01.05.2023 18:16:58  tsPrev:  28.04.2023 20:05:40  seedTs:  01.05.2023 18:16:58
-battery-health (VSS2, deleted) (7):   "Maximum Capacity Percent": 98   ts:  24.06.2023 14:18:06  tsPrev:  01.05.2023 18:16:58  seedTs:  01.05.2023 18:16:58
-battery-health (VSS2, deleted) (8):   "Maximum Capacity Percent": 98   ts:  24.06.2023 14:18:06  tsPrev:  01.05.2023 18:16:58  seedTs:  01.05.2023 18:16:58
-battery-health (VSS2, deleted) (9):   "Maximum Capacity Percent": 98   ts:  24.06.2023 14:18:06  tsPrev:  01.05.2023 18:16:58  seedTs:  01.05.2023 18:16:58
-battery-health (VSS2, deleted) (10):  "Maximum Capacity Percent": 98   ts:  26.06.2023 12:15:01  tsPrev:  24.06.2023 14:18:06  seedTs:  01.05.2023 18:16:58
-battery-health (VSS2, deleted) (11):  "Maximum Capacity Percent": 98   ts:  26.06.2023 12:15:01  tsPrev:  24.06.2023 14:18:06  seedTs:  01.05.2023 18:16:58
-battery-health (VSS2, deleted) (12):  "Maximum Capacity Percent": 97   ts:  28.06.2023 10:15:01  tsPrev:  26.06.2023 12:15:01  seedTs:  01.05.2023 18:16:58
-battery-health (VSS2, deleted) (13):  "Maximum Capacity Percent": 97   ts:  28.06.2023 10:15:01  tsPrev:  26.06.2023 12:15:01  seedTs:  01.05.2023 18:16:58
-battery-health (VSS1, deleted) (1):   "Maximum Capacity Percent": 97   ts:  30.06.2023 08:15:01  tsPrev:  28.06.2023 10:15:01  seedTs:  01.05.2023 18:16:58
-battery-health (VSS1, deleted) (2):   "Maximum Capacity Percent": 97   ts:  30.06.2023 08:15:01  tsPrev:  28.06.2023 10:15:01  seedTs:  01.05.2023 18:16:58
-battery-health (VSS1, deleted) (3):   "Maximum Capacity Percent": 97   ts:  02.07.2023 06:15:01  tsPrev:  30.06.2023 08:15:01  seedTs:  01.05.2023 18:16:58
-battery-health (VSS1, deleted) (4):   "Maximum Capacity Percent": 97   ts:  02.07.2023 06:15:01  tsPrev:  30.06.2023 08:15:01  seedTs:  01.05.2023 18:16:58
-battery-health (VSS1, deleted) (5):   "Maximum Capacity Percent": 97   ts:  04.07.2023 04:15:01  tsPrev:  02.07.2023 06:15:01  seedTs:  01.05.2023 18:16:58
-battery-health (VSS1, deleted) (6):   "Maximum Capacity Percent": 97   ts:  04.07.2023 04:15:01  tsPrev:  02.07.2023 06:15:01  seedTs:  01.05.2023 18:16:58
-battery-health (VSS1, deleted) (7):   "Maximum Capacity Percent": 97   ts:  04.07.2023 04:15:01  tsPrev:  02.07.2023 06:15:01  seedTs:  01.05.2023 18:16:58
-battery-health (VSS1, deleted) (8):   "Maximum Capacity Percent": 97   ts:  04.07.2023 04:15:01  tsPrev:  02.07.2023 06:15:01  seedTs:  01.05.2023 18:16:58
-battery-health (VSS1, deleted) (9):   "Maximum Capacity Percent": 97   ts:  04.07.2023 04:15:01  tsPrev:  02.07.2023 06:15:01  seedTs:  01.05.2023 18:16:58
-battery-health (VSS1, deleted) (10):  "Maximum Capacity Percent": 97   ts:  04.07.2023 04:15:01  tsPrev:  02.07.2023 06:15:01  seedTs:  01.05.2023 18:16:58
-battery-health (VSS1, deleted) (11):  "Maximum Capacity Percent": 97   ts:  04.07.2023 04:15:01  tsPrev:  02.07.2023 06:15:01  seedTs:  01.05.2023 18:16:58
-battery-health (VSS1, deleted) (12):  "Maximum Capacity Percent": 97   ts:  04.07.2023 04:15:01  tsPrev:  02.07.2023 06:15:01  seedTs:  01.05.2023 18:16:58
-battery-health (VSS1, deleted) (13):  "Maximum Capacity Percent": 97   ts:  04.07.2023 04:15:01  tsPrev:  02.07.2023 06:15:01  seedTs:  01.05.2023 18:16:58
-battery-health (VSS1, deleted) (14):  "Maximum Capacity Percent": 97   ts:  04.07.2023 04:15:01  tsPrev:  02.07.2023 06:15:01  seedTs:  01.05.2023 18:16:58
-battery-health (VSS1, deleted) (15):  "Maximum Capacity Percent": 97   ts:  04.07.2023 04:15:01  tsPrev:  02.07.2023 06:15:01  seedTs:  01.05.2023 18:16:58
-battery-health (VSS1, deleted) (16):  "Maximum Capacity Percent": 97   ts:  04.07.2023 04:15:01  tsPrev:  02.07.2023 06:15:01  seedTs:  01.05.2023 18:16:58
-battery-health (VSS1, deleted) (17):  "Maximum Capacity Percent": 97   ts:  04.07.2023 04:15:01  tsPrev:  02.07.2023 06:15:01  seedTs:  01.05.2023 18:16:58
-battery-health (VSS1, deleted) (18):  "Maximum Capacity Percent": 97   ts:  04.07.2023 04:15:01  tsPrev:  02.07.2023 06:15:01  seedTs:  01.05.2023 18:16:58
-battery-health (VSS1, deleted) (19):  "Maximum Capacity Percent": 97   ts:  04.07.2023 04:15:01  tsPrev:  02.07.2023 06:15:01  seedTs:  01.05.2023 18:16:58
-battery-health (VSS1, deleted) (20):  "Maximum Capacity Percent": 97   ts:  05.07.2023 07:45:54  tsPrev:  04.07.2023 04:15:01  seedTs:  01.05.2023 18:16:58
-battery-health (VSS1, deleted) (21):  "Maximum Capacity Percent": 97   ts:  06.07.2023 19:30:56  tsPrev:  05.07.2023 07:45:54  seedTs:  01.05.2023 18:16:58
-battery-health (VSS1, deleted) (22):  "Maximum Capacity Percent": 97   ts:  06.07.2023 19:30:56  tsPrev:  05.07.2023 07:45:54  seedTs:  01.05.2023 18:16:58
-battery-health (VSS1, deleted) (23):  "Maximum Capacity Percent": 97   ts:  06.07.2023 19:30:56  tsPrev:  05.07.2023 07:45:54  seedTs:  01.05.2023 18:16:58
-battery-health (VSS1, deleted) (24):  "Maximum Capacity Percent": 97   ts:  06.07.2023 19:30:56  tsPrev:  05.07.2023 07:45:54  seedTs:  01.05.2023 18:16:58
-battery-health (VSS1, deleted) (25):  "Maximum Capacity Percent": 97   ts:  06.07.2023 19:30:56  tsPrev:  05.07.2023 07:45:54  seedTs:  01.05.2023 18:16:58
-battery-health (VSS1, deleted) (26):  "Maximum Capacity Percent": 97   ts:  06.07.2023 19:30:56  tsPrev:  05.07.2023 07:45:54  seedTs:  01.05.2023 18:16:58
-battery-health (VSS1, deleted) (27):  "Maximum Capacity Percent": 97   ts:  06.07.2023 19:30:56  tsPrev:  05.07.2023 07:45:54  seedTs:  01.05.2023 18:16:58
-battery-health (VSS1, deleted) (28):  "Maximum Capacity Percent": 97   ts:  06.07.2023 19:30:56  tsPrev:  05.07.2023 07:45:54  seedTs:  01.05.2023 18:16:58
-battery-health (VSS1, deleted) (29):  "Maximum Capacity Percent": 97   ts:  06.07.2023 19:30:56  tsPrev:  05.07.2023 07:45:54  seedTs:  01.05.2023 18:16:58
-battery-health (VSS1, deleted) (30):  "Maximum Capacity Percent": 97   ts:  06.07.2023 19:30:56  tsPrev:  05.07.2023 07:45:54  seedTs:  01.05.2023 18:16:58
-battery-health (VSS1, deleted) (31):  "Maximum Capacity Percent": 97   ts:  10.07.2023 09:33:44  tsPrev:  06.07.2023 19:30:56  seedTs:  01.05.2023 18:16:58
-Base_18 hardware descriptor
-fmm-computer-name: MacBook Air
-BootOrder: 1:Boot0080
-Boot0080: \pDZ\A20E739E-78F6-3924-A686-272E77E54C35\System\Library\CoreServices\boot.efi
-Boot0081: unknown
-Boot0082: \pDZ\A20E739E-78F6-3924-A686-272E77E54C35\System\Library\CoreServices\boot.efi
-BootFFFF: \System\Library\CoreServices\boot.efi
-15 boots since last garbage collection, MTC counter: 29 - 44
-VSS1                   VSS2
-1 (1 active)           1 (1 active) Memory Configs g
-1 (1 active)           1 (1 active) Memory Configs h
-1                      0 fmm-mobileme-token-FMM (ok)
-0                      0 Microsoft certificates (ok)
-29 (1 active)          18 (1 active) Boot PathProperties0000 (ok)
-11 (1 active)          12 (1 active) NVRAM PathProperties0000 (ok)
-VSS1: found 241 variables (51 valid, 190 deleted)
-VSS2: found 337 variables (49 valid, 288 deleted)
-1554 bytes free space of 65456 in VSS1
-1381 bytes free space of 65456 in VSS2
-(Garbage collection should automatically run the next time you reboot.)
-[/CODE]
 
 
 -> So added back and forward buttons to the analyse dialog as these get bigger with displaying battery-health.
