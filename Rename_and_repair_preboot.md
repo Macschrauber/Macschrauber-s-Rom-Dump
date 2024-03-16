@@ -86,7 +86,8 @@ ___________________
 10 ESPs were renamed by the ```Label all bootloader ESPs```tool of the Dumper package, names are correct (or adjusted).<br>
 ___________________
 ![11](https://github.com/Macschrauber/Macschrauber-s-Rom-Dump/blob/main/assets/img_Rename_and_repair_preboot/AA%20show%20preboot.png)
-Show the Preboot name
+![12](https://github.com/Macschrauber/Macschrauber-s-Rom-Dump/blob/main/assets/img_Rename_and_repair_preboot/AB%20rename%20preboot.png)  
+Show and let rename the Preboot rendered name, as appears in the Apple Boot Picker or OpenCore boot menu
 ___________________
 
 
