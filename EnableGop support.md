@@ -1,9 +1,11 @@
-### What is EnableGop
+### What is EnableGop?
 
-The basic idea is: if your GPU already works in but not before OpenCore, then with this driver added to your main firmware it should be able to work before OpenCore, too.  
-So this is basically a firmware driver by Mike Beaton to inject to get you a bootscreen with your Gop capable GPU.
+The basic idea is: if your GPU already works with OpenCore but not before it, then with this driver added to your Mac Pro firmware, your GPU should be able to work before OpenCore as well.  
+This is essentially a firmware driver by Mike Beaton that injects code to provide a bootscreen for your GPU capable of Gop (Graphics Output Protocol), which is found in most unmodified GPUs made within the last 8 years.  
 
-https://github.com/acidanthera/OpenCorePkg/tree/master/Staging/EnableGop
+https://github.com/acidanthera/OpenCorePkg/tree/master/Staging/EnableGop  
+
+The Dumper supports this firmware driver, reports its version, and also checks for some faults that may have occurred.
 ##
 ##
 
