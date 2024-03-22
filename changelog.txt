@@ -1,3 +1,21 @@
+Update from 22-3-2024
+
+-> analysing .dump files eficheck creates for sending them without user data (Fsys strean) to Apple
+My Mac Mini 7,1 creates a 6 MB file, I would need more examples of other sizes
+
+-> the stop button of the progress window works now in the Dumper and most of the tools
+
+-> worked over a handler to process sudo cli tool calls, so more precise logging
+
+-> added <download from github> to the downloaders
+
+Also error correction in the <Is damaged fix> tool due to a typo in a version comment.
+
+
+
+
+
+
 Update from 10-3-2024
 
 -> adding a line when OpenCore is running during storing the dump
