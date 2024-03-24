@@ -1,6 +1,6 @@
 Update from 22-3-2024
 
--> analysing .dump files eficheck creates for sending them without user data (Fsys strean) to Apple
+-> analysing .dump files eficheck creates for sending them without user data (Fsys stream) to Apple
 My Mac Mini 7,1 creates a 6 MB file, I would need more examples of other sizes
 
 -> the stop button of the progress window works now in the Dumper and most of the tools
