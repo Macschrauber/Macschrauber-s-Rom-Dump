@@ -1,3 +1,19 @@
+Update from 31-3-2024
+
+-> added an option for <ESP Mount from list and show bootloader> to prevent booting of Uefi Windows
+If started on a Mac Pro 1,1 to 5,1 unit it allows the user to rename bootx64.efi to bootx64.efioff to
+prevent direct booting of Uefi Windows in its ESP by request.
+
+-> a 2nd variant of the LBSN Sector for MP41 is detected
+
+-> -nofreshdump argument for test_nvram and adding this for analysing ch341a dumps
+as a readout of a chip in the programmer could not be treated same for live diagnostics.
+
+also a fix for Type_80 firmwares what have more than one Fsys stream in the NRAM Volume, reporting FSys variables order
+
+
+
+
 Update from 22-3-2024
 
 -> analysing .dump files eficheck creates for sending them without user data (Fsys stream) to Apple
