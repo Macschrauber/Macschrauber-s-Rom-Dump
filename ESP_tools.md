@@ -14,7 +14,7 @@ what's in?
 ![1](https://github.com/Macschrauber/Macschrauber-s-Rom-Dump/blob/main/assets/img_ESP_tools/1%20select%20source%20ESP.png)
 - select destination ESP from same list
 ![2](https://github.com/Macschrauber/Macschrauber-s-Rom-Dump/blob/main/assets/img_ESP_tools/2%20select%20destination%20ESP.png)
-- it copies the ESP from source to destination, asks for confirmation if destination ESP has a bootloader
+- it copies the ESP from source to destination, asks for confirmation, when destination ESP has a bootloader
 ![3](https://github.com/Macschrauber/Macschrauber-s-Rom-Dump/blob/main/assets/img_ESP_tools/3%20confirm%20to%20delete%20destination%20ESP.png)
 - also can copy to a folder for archiving. Folder name contains bootloader flavor and a time stamp
 - copies archived bootloaders back
