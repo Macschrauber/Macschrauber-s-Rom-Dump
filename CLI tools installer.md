@@ -1,5 +1,9 @@
 # Installer for using the CLI tools in Terminal
+## this is optional if you want to use the additional options `test_nvram` provides
+### `test_nvram` is used by the Dumper as well.
 
+This script installs the `test_nvram` shell script as a system wide available command along with the helper tools in `/usr/local/bin`  
+You can just double click it, below is an example output of `install_test_nvram_cli_tool`.  
 ```
  ~ % /Volumes/Macschrauber\'s\ CMP\ Rom\ Dump/Readme\ \&\ other\ tools/Installer\ for\ the\ CLI\ tools\ \(optional\)/install_test_nvram_cli_tool
 =============================================================================
@@ -28,3 +32,5 @@ macserial -> /usr/local/bin/macserial
 
 done
 ```
+Examples of what can be done with `test_nvram` are in:  
+https://github.com/Macschrauber/Macschrauber-s-Rom-Dump/blob/main/shell%20script%20examples.md
