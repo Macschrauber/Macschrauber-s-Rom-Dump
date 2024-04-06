@@ -80,7 +80,7 @@ VSS2 (Formatted) (Healthy)
 If you encounter an error regarding an unknown developer when attempting to open the Dumper, macOS displays a message stating:  
 ```macOS cannot verify the developer of.``` 
   
-To allow the system to open the Dumper, perform a Ctrl-click on it and select <open>.
+To allow the system to open the Dumper, perform a Ctrl-click on it and select open. 
 
 <br>
 
