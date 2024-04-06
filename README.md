@@ -1,6 +1,6 @@
 ### What is it?
 
-A tool for dumping and flashing the firmware of a Mac Pro 4,1 / 5,1 combined with an analyser of the NVRAM content and the firmware validity.
+A tool for dumping (reading) and flashing (writing) the firmware of a Mac Pro 4,1 / 5,1 combined with an analyser of the NVRAM content and the firmware validity.
 
 <br>
 
@@ -146,6 +146,6 @@ for running RomDump Macschrauber csrutil enable --without kext is enough
 
 <br><br>
   
-### If you require assistance with a damaged boot Rom, feel free to contact me in English or German at ```tigerpost@gmx.de```
+### If you require assistance with a damaged boot rom, feel free to contact me in English or German at ```tigerpost@gmx.de```
 
 If you want to communicate at Github the preferred language is English.
