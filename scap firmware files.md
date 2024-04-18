@@ -1,6 +1,6 @@
 # .scap files info displaying
 
-Since Version 19-4-2024 the Dumper displays basic info for firmware update files.
+Since Version 19-4-2024 the Dumper displays basic info for firmware capsule .scap files.
 
 <br>
 What are .scap files?   
