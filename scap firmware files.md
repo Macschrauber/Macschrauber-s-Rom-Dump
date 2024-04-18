@@ -33,4 +33,5 @@ Apple Rom Version
   Build Type:   Official Build, Release
   Compiler:     Apple clang version 3.0 (tags/Apple/clang-211.10.1) (based on LLVM 3.0svn)
   rename /Users/user/temp/unnamed.scap to MBP91_228.0.0.0.0.scap (1 = yes) ?1
-renamed to MBP91_228.0.0.0.0.scap```
+renamed to MBP91_228.0.0.0.0.scap
+```
