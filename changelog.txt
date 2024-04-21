@@ -7,7 +7,7 @@ Those are proprietary firmware capsules used by Apple to securely package and di
 example: 1 (5 deleted) MemoryConfigg
 
 -> showing some more NVRAM variables:
-ecover-boot-mode
+recover-boot-mode
 sleepwake_diagxx
 SleepWakeFailureString
 StartupMute and SystemAudioVolume for detecting no audible boot chime
