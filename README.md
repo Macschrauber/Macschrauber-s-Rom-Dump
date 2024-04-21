@@ -28,7 +28,7 @@ I added some tools around the Mac administration that I wrote and find useful. C
 ```
 $test_nvram 1.bin  
 ===================================================  
-test_nvram_shell_script 10-Mar-2024 by Macschrauber  
+test_nvram_shell_script 21-Mar-2024 by Macschrauber  
 scanning: 1.bin  
   
 nvram.vol position: 0x120000, size: 0x30000, header size: 0x48  
@@ -57,16 +57,16 @@ fmm-computer-name: xxx Mac Pro
 BootOrder: 1:Boot0080  
 Boot0080: Mac OS X PciRoot(0x0)/Pci(0x3,0x0)/Pci(0x0,0x0)/SasEx(0x01000000,0x00253856,0xDF5F,0xB181,0,0,0)/HD(2,GPT,066DD320-xxxx-449D-88CB-48B603A295E1,0x64028,0x1D161920)/VenMedia(BE74FCF7-xxxx-49F3-9147-01F4042E6842,25188281F5051E4F83CD2563D5B62E7C)/\41651A92-xxxx-4950-A503-8C39B4859C2F\System\Library\CoreServices\boot.efi  
 BootFFFF: PciRoot(0x0)/Pci(0x1F,0x2)/Sata(0x4,0x0,0x0)/HD(2,GPT,FFE4FF73-xxxx-4969-B1F5-1ACC09BEF3D5,0x64028,0x746A2D60)/VenMedia(BE74FCF7-xxxx-49F3-9147-01F4042E6842,5C66853E1A247A4DA378F5D95F5F72CA)/\809DFFD4-xxxx-4ED6-AD2D-7F3D999488F1\System\Library\CoreServices\boot.efi  
-2 boots since last garbage collection, MTC counter: 1 - 3  
-3  (1 active) Memory Configs g (ok)  
-3  (1 active) Memory Configs h (ok)  
-1  (1 active) Memory Configs i (ok)  
-1  (1 active) Memory Configs j (ok)  
+3 boots since last garbage collection, MTC counter: 1 - 3  
+1  (2 deleted) Memory Configs g (ok)  
+1  (0 deleted) Memory Configs h (ok)  
+1  (0 deleted) Memory Configs i (ok)  
+1  (0 deleted) Memory Configs j (ok)  
 0  Microsoft certificates (ok)  
-1  (1 active) BluetoothActiveControllerInfos (ok)  
-1  (1 active) BluetoothInternalControllerInfos (ok)  
-2  (0 active) Boot PathProperties0000 (ok)  
-2  (1 active) NVRAM PathProperties0000 (ok)  
+1  (0 deleted) BluetoothActiveControllerInfos (ok)  
+1  (0 deleted) BluetoothInternalControllerInfos (ok)  
+0  (2 deleted) Boot PathProperties0000 (ok)  
+1  (0 deleted) NVRAM PathProperties0000 (ok)  
 VSS2 is empty (ok after recent full nvram reset or after flashing a rebuilt firmware)  
 41827 bytes free space of 65464  
 VSS1 (Formatted) (Healthy), found 45 variables (29 valid, 16 deleted)  
