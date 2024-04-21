@@ -1,3 +1,24 @@
+Update from 21-4-2024
+
+-> analyzing `.scap`files
+Those are proprietary firmware capsules used by Apple to securely package and distribute firmware updates.
+
+-> revisited the display of the NVRAM variables to
+example: 1 (5 deleted) MemoryConfigg
+
+-> showing some more NVRAM variables:
+ecover-boot-mode
+sleepwake_diagxx
+SleepWakeFailureString
+StartupMute and SystemAudioVolume for detecting no audible boot chime
+
+-> wildcards for the test_nvram_shell script. Like [test_nvram *.bin -showallvars]
+
+-> multiple CRC32 errors got all UUIDs displayed
+
+
+
+
 Update from 31-3-2024
 
 -> added an option for <ESP Mount from list and show bootloader> to prevent booting of Uefi Windows
@@ -26,7 +47,6 @@ My Mac Mini 7,1 creates a 6 MB file, I would need more examples of other sizes
 -> added <download from github> to the downloaders
 
 Also error correction in the <Is damaged fix> tool due to a typo in a version comment.
-
 
 
 
