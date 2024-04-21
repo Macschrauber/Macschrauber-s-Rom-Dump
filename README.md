@@ -1,15 +1,14 @@
 ### What is it?
 
 A tool for dumping (reading) and flashing (writing) the firmware of a Mac Pro 4,1 / 5,1 combined with an analyser of the NVRAM content and the firmware validity.
-
+<br>
+Also it can dump and analyse firmwares from the most Macs from around 2006 to 2017.
 <br>
 
 ![1](https://github.com/Macschrauber/Macschrauber-s-Rom-Dump/blob/main/assets/img_Dumper/main%20dialog.png?raw)  
 
 It reads and writes to a ch341a USB programmer as well to work with desoldered flash chips. It detects a connected programmer and installs the libs to communicate with it. 
   
-Also it can dump and analyse firmwares from the most Macs from around 2006 to 2017.  
-
 I added some tools around the Mac administration that I wrote and find useful. Check out the other .md files for them.  
 
 <br>
