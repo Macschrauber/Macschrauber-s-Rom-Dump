@@ -14,7 +14,7 @@ I added some tools around the Mac administration that I wrote and find useful. C
 
 <br>
 
-### example output of the Dumper (main GUI tool)
+### example output of the Dumper (main GUI tool) with some problems
 ![1](https://github.com/Macschrauber/Macschrauber-s-Rom-Dump/blob/main/assets/img_Dumper/5a.%20analyses%20scrollable.png)  
 
 <br>
