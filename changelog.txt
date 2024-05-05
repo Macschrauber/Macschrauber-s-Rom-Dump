@@ -12,7 +12,7 @@ like state: 0x00 or 0xff and size: 0xff
 
 -> the log shows a platform compatibility test for the helper tools
 
-fixed: security mode=none presented an alarm
+fixed: security mode=none presented an alarm, tho this setting is useless it must not show a warning
 
 
 
