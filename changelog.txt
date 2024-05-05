@@ -1,3 +1,22 @@
+Update from 5-5-2024
+
+-> presenting CSR values for s.i.p / rootless flags
+like: csr_Allow_Untrusted_Kexts, Unrestricted_FS, Task_For_Pid, Apple_Internal, Unrestricted_Dtrace, Unrestricted_NVRAM (0x77)
+
+-> warn for unusual var headers
+like state: 0x00 or 0xff and size: 0xff
+
+-> presenting nvda_drv=1 variable
+
+-> presenting efi-boot-device-data variable
+
+-> the log shows a platform compatibility test for the helper tools
+
+fixed: security mode=none presented an alarm
+
+
+
+
 Update from 21-4-2024
 
 -> analyzing `.scap`files
