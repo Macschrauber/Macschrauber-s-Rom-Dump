@@ -106,6 +106,8 @@ They also can be flagged, if, do ```xattr -cr "/path/to/the.app"```
 
 Use my Github Downloader to obtain a copy with no quarantine flag set:  
 [https://github.com/Macschrauber/Macschrauber-s-Rom-Dump/releases/download/Release/Download.the.Dumper.from.github.zip](https://github.com/Macschrauber/Macschrauber-s-Rom-Dump/releases/download/Release/Download.the.Dumper.from.github.zip)
+Or to unflag the .dmg (I have the .dmg) by copying it to the user's Download folder and let it remove the quarantine flags.
+
 
 <br><br>
 ———————————————————————————————————————————————
