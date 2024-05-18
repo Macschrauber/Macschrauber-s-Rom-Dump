@@ -16,6 +16,13 @@ fixed:
 -> security mode=none presented an alarm, tho this setting is useless it must not show a warning
 -> during house keeping an error slipped in, where firmwares with 2 alive streams would not set the active stream as VSS1
 
+ESP tools:
+-> support for multiple ESPs on one volume
+-> OCLP ESPs got a model string, to distinguish
+
+fixed:
+-> Windows ESP did not got their icon, got a path wrong
+
 
 
 Update from 21-4-2024
