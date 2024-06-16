@@ -148,6 +148,6 @@ for running RomDump Macschrauber csrutil enable --without kext is enough
 
 <br><br>
   
-### If you require assistance with a damaged boot rom, feel free to contact me in English or German at ```tigerpost@gmx.de```
+### If you require assistance with a damaged boot rom, feel free to contact me in English or German at ```macschrauber@gmx.de```
 
 If you want to communicate at Github the preferred language is English.
