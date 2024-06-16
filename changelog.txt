@@ -1,3 +1,18 @@
+Update from 16-6-2024
+
+-> display BootNext, unnamed, clover and gpu-power-mode variables
+-> logging of Board-ID for iMacPro 1,1 and MacPro 7,1
+-> logging detailed csr config status
+
+-> hexdump-all argument for test_nvram
+with test_nvram dumpfile.bin -hexdump-all a full list of hexdumps of deleted and valid NVRAM variables is displayed. This can be hughe.
+
+-> additional tool: Macschrauber's System Version Scanner
+it scans thru all mounted volumes and displays the MacOs version, drive and physical position, similar to the ESP tools.
+
+Also various corrections and additions to the ESP tools, regarding Windows ESP and external volumes.
+
+
 Update from 5-5-2024
 
 -> presenting CSR values for s.i.p / rootless flags
