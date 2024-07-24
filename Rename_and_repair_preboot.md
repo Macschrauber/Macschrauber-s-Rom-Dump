@@ -105,11 +105,11 @@ However, it alarms if it finds High Sierra ```SystemVersion.plist``` files in AP
 The wrong ```.contentDetails``` and the ```.disk_label*``` icon drawn by the native Apple boot picker can be rebuilt by the tool as well.  
 
 You can edit the names and icons with the tool as well, even with multiple lines by entering option-return for a new line.  
-This is the button <proceed with label editor>. Thanks to [USER=710085]@joevt[/USER] for all the help and providing the bash functions for it.  
+This is the button <proceed with label editor>. Thanks to @joevt for all the help and providing the bash functions for it.  
 
-[ATTACH type="full" alt="IMG_6279.jpeg"]2339442[/ATTACH]
-[CENTER]the names in the boot picker could be renamed by the preboot fixer and renamer tool
-The [USER=710085]@joevt[/USER] multiline names are ESPs, there is also a tool for renaming ESPs in the Dumper package[/CENTER]
+The names in the boot picker could be renamed by the preboot fixer and renamer tool.
+
+The @joevt multiline names are ESPs, there is also a tool for renaming ESPs in the Dumper package
 
 <br>
 
