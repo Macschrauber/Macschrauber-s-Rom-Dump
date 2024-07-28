@@ -104,8 +104,11 @@ They also can be flagged, if, do ```xattr -cr "/path/to/the.app"```
 
 <br>
 
-Use my Github Downloader to obtain a copy with no quarantine flag set:  
+Use my Github Downloader to obtain a copy with no quarantine flag set:
+<br>
 [https://github.com/Macschrauber/Macschrauber-s-Rom-Dump/releases/download/Release/Download.the.Dumper.from.github.zip](https://github.com/Macschrauber/Macschrauber-s-Rom-Dump/releases/download/Release/Download.the.Dumper.from.github.zip)
+<br>
+You may need to right-click on the App and select open.
 <br><br>
 Or, if you want to use an older version, use the downloader button `I have the .DMG file`. This unflags the .DMG by copying it to the user's Download folder and let the downloader remove the quarantine flags.
 
@@ -149,5 +152,8 @@ for running RomDump Macschrauber csrutil enable --without kext is enough
 <br><br>
   
 ### If you require assistance with a damaged boot rom, feel free to contact me in English or German at ```macschrauber@gmx.de```
+### Also I can upgrade Mac Pro 4,1 (2009) firmwares properly to Mac Pro 5,1 (2010-2012).
+(The Netkas tool or the underlying processes don't work anymore.)
+<br><br>
 
 If you want to communicate at Github the preferred language is English.
