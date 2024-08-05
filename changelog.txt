@@ -1,3 +1,24 @@
+Update from 5-8-2024
+
+The Dumper:
+-> Added recognition for Matt Card.
+a Matt Card is a repair module what replaces your defective firmware chip. You should not use that chip with preset IDs
+-> Added recognition for more errors found by UEFIExtract.
+-> Implemented dynamic $IBIOSI$ scan to retrieve BIOS versions of "unknown" machines' firmware and unnamed .fd files.
+-> Revisited OpenCore LauncherOption: Full presentation.
+-> Fixed: ASCII values in csr-active-config were not interpreted correctly.
+-> Fixed: Usernames with special characters, such as spaces, no longer cause privilege errors.
+
+Extra Tools (ESP tools, Repair preboot, etc.):
+-> Enlarged dialog buttons for wider dialogs.
+-> Improved recognition of dark and light mode for rendering icons of ESPs and System volumes.
+
+New tool: Macschrauber's System Version Scanner:
+-> Scans for MacOs and Windows versions
+-> Presents sealed status ( yes / broken ) for MacOS
+-> Presents UEFI / Bios variant for Windows
+
+
 Update from 16-6-2024
 
 -> display BootNext, unnamed, clover and gpu-power-mode variables
