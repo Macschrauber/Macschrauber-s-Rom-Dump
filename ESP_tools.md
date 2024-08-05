@@ -56,7 +56,8 @@ classic Mac Pro units with one active NVRAM stream.
 **for identifying the mounted ESPs:**
 - ```Tag all ESPs```: Places a null bytes file in the root of the ESP with drive's made, type, interface, physical position
 - ```Check ESPs for MS certificates```: It checks the ESPs for a bootloader containing Microsoft UEFI Windows certificates
-  giving also the option to deselect Uefi Windows bootloader to prevent unprotected boot for machines what need that 
+  giving also the option to deselect Uefi Windows bootloader to prevent unprotected boot for machines what need that.
+  It got an option for setup to live in the `login items`, to deactivate Windows ESPs for being unable to start without `OpenCore` or `Refind Plus` protection. Also it scans the NVRAM streams for `Windows certificates` if csr values are set as needed.
 
 <br>
 
