@@ -59,7 +59,11 @@ classic Mac Pro units with one active NVRAM stream.
   giving also the option to deselect Uefi Windows bootloader to prevent unprotected boot for machines what need that.
   It got an option for setup to live in the `login items`, to deactivate Windows ESPs for being unable to start without `OpenCore` or `Refind Plus` protection. Also it scans the NVRAM streams for `Windows certificates` if csr values are set as needed.
 
-<br>
+
+![1](https://github.com/Macschrauber/Macschrauber-s-Rom-Dump/blob/main/assets/img_ESP_tools/Check%20ESPs%20for%20MS%20certificates/3%20added.png)
+![2](https://github.com/Macschrauber/Macschrauber-s-Rom-Dump/blob/main/assets/img_ESP_tools/Check%20ESPs%20for%20MS%20certificates/setup.png)
+![3](https://github.com/Macschrauber/Macschrauber-s-Rom-Dump/blob/main/assets/img_ESP_tools/Check%20ESPs%20for%20MS%20certificates/deactivate%20Windows%20ESP%20dialog.png)
+
 
 **Blessing:**
 - ```Bless OpenCore ESP```: Bless (set the bootvar to it) the selected ESP
