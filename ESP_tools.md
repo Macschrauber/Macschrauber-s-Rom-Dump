@@ -1,15 +1,16 @@
 # ESP Tools
 
-What ESP is blessed one can see when dumping the firmware with the Dumper.
+What ESP is blessed one can see when dumping the firmware with the Dumper.  
+The ESP Tools what show a list of ESPs mark them with a `*` as first character of the line.
 
 
 
 To mount ESP Partitions one can use my ESP tools:
-
+  
 what's in?
 
 
-**the ```Copy ESP``` tool:**
+**`Copy ESP`:**
 - select source ESP from a list with bootloader flavor, drive's made, type, interface, physical position
 ![1](https://github.com/Macschrauber/Macschrauber-s-Rom-Dump/blob/main/assets/img_ESP_tools/1%20select%20source%20ESP.png)
 - select destination ESP from same list
@@ -55,9 +56,10 @@ classic Mac Pro units with one active NVRAM stream.
 
 **for identifying the mounted ESPs:**
 - ```Tag all ESPs```: Places a null bytes file in the root of the ESP with drive's made, type, interface, physical position
-- ```Check ESPs for MS certificates```: It checks the ESPs for a bootloader containing Microsoft UEFI Windows certificates
-  giving also the option to deselect Uefi Windows bootloader to prevent unprotected boot for machines what need that.
-  It got an option for setup to live in the `login items`, to deactivate Windows ESPs for being unable to start without `OpenCore` or `Refind Plus` protection. Also it scans the NVRAM streams for `Windows certificates` if csr values are set as needed.
+- ```Check ESPs for MS certificates```: It checks the ESPs for a bootloader containing Microsoft UEFI Windows certificates.  
+  Giving also the option to deselect Uefi Windows bootloader to prevent unprotected boot for machines what need that.  
+  It got an option for setup to live in the `login items`, to deactivate Windows ESPs for being unable to start without `OpenCore` or `Refind Plus` protection.
+  Also it scans the NVRAM streams for `Windows certificates` if csr values are set as needed.
 
 
 ![1](https://github.com/Macschrauber/Macschrauber-s-Rom-Dump/blob/main/assets/img_ESP_tools/Check%20ESPs%20for%20MS%20certificates/3%20added.png)
@@ -74,7 +76,9 @@ classic Mac Pro units with one active NVRAM stream.
 - not exactly an ESP tool, this let you rename the Boot Picker entry for the OS. If your entries suddenly change to xyz - data you suffered from High Sierra overwriting Preboot volumes of newer OS.
 In OpenCore you will see a mismatched High Sierra *icon. This is due overwritten SystemVersion.plist. Also invalid board ID / the forbidden sign can happen.
 
-This tool also repairs these issues.
+This tool also repairs these issues.<br>
+Detailed information in:<br>
+https://github.com/Macschrauber/Macschrauber-s-Rom-Dump/blob/main/Rename_and_repair_preboot.md
 
 <br>
 
