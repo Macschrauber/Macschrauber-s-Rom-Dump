@@ -12,6 +12,9 @@ a Matt Card is a repair module what replaces your defective firmware chip. You s
 Extra Tools (ESP tools, Repair preboot, etc.):
 -> Enlarged dialog buttons for wider dialogs.
 -> Improved recognition of dark and light mode for rendering icons of ESPs and System volumes.
+-> Improved check ESP for MS certificates tool to live in the login items to check after every Mac OS start.
+It can deactivate Windows ESPs so they do not start without OpenCore or RefindPlus protection.
+Also it can check the NVRAM streams for Microsoft certificates when csr values are set as needed.
 
 New tool: Macschrauber's System Version Scanner:
 -> Scans for MacOs and Windows versions
