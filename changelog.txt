@@ -1,3 +1,67 @@
+Update from 1-9-2024
+
+The Dumper:
+-> Various fixes for running the Dumper and the tools as a non admin user.
+So the optional, encrypted password storage got an admin user name, too, if needed.
+-> Added iMac 12,1 dumping via Eficheck.
+As that machine freezes when loading DirectHW.kext. Eficheck is available on High Sierra and later.
+-> Adds MacOs version and CPU configuration to the analyse window and log file, if available.
+-> Added detailed boot block info, with version and release date.
+-> Detect more empty .fd firmware files for MP41 and MP51.
+
+
+test_nvram (cli part of the Dumper):
+-> Added scanning file system wide.
+example: test_nvram -r '(4M)' 'MP51*.bin'
+-> Added -printsystemineveryhexdumpvar argument, to display the MacOs version in ever hexdump. Useful to capture differences in NVRAM variables' content.
+-> Added -romtobin argument, to rename filename.rom to filename.bin"
+-> Adjustments to run in every path, not just in /usr/local/bin
+-> Added showing a specific variable as hexdump and text.
+Scans Fsys and NVRAM), can also be a part of the name. Like '-vars ssn', what shows ssn, ssnp and GUID.
+Example: test_nvram -r '(4M)' '-vars boot-args' 'MP51*.bin' 
+
+-> Read and decode csr-active-config directly from NVRAM.
+Example: test_nvram '-nvram csr-active-config'
+NVRAM output:
+csr-active-config	w%00%00%00
+-------------------------------------------------------------------
+Decoded:
+77000000
+Decoded (little-endian representation):
+00000077
+-------------------------------------------------------------------
+0x001 CSR_ALLOW_UNTRUSTED_KEXTS
+0x002 CSR_ALLOW_UNRESTRICTED_FS
+0x004 CSR_ALLOW_TASK_FOR_PID
+0x010 CSR_ALLOW_APPLE_INTERNAL
+0x020 CSR_ALLOW_UNRESTRICTED_DTRACE
+0x040 CSR_ALLOW_UNRESTRICTED_NVRAM
+-------------------------------------------------------------------
+Hexadecimal encoding:
+00000000: 3737 3030 3030 3030                      77000000
+-------------------------------------------------------------------
+Raw XML data:
+dwAAAA==
+-------------------------------------------------------------------
+Base64 encoding:
+w
+-------------------------------------------------------------------
+Hexadecimal conversion:
+6477414141413d3d
+-------------------------------------------------------------------
+
+-> Fixed a glitch where it printed a lot of satsmart errors for not supported drives.
+-> Various fixes for running the Dumper and the tools in Snow Leopard
+
+
+Extra Tools (ESP tools, Repair preboot, etc.):
+-> boot-args: edit boot-args got a vertical list of boot-args.
+Makes reading a large list of boot-args easier.
+-> boot-args: -v for verbose mode does not error when csr protection for nvram is on.
+As this argument is allowed with nvram protection
+
+
+
 Update from 5-8-2024
 
 The Dumper:
