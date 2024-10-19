@@ -140,4 +140,4 @@ Using the Dumper to check and backup the bootrom is a good practice for all Macs
 <br>
 
 link to the Macrumors Dumper post:  
-https://forums.macrumors.com/threads/healthy-nvram-normal-behaviour-on-4-1-5-1-machines.2333460/page-4?post=32055801#post-32055801
+https://forums.macrumors.com/threads/high-sierra-booting-possibly-corrupts-newer-systems-fix-description-and-a-boot-picker-renamer.2415320/
