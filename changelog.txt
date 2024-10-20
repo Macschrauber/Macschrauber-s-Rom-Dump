@@ -1,3 +1,45 @@
+Update from 19-10-2024
+
+The Dumper:
+-> Detects if running on a T2 or Silicon Mac and removes the button accordingly.
+-> Added a dialog for missing LBSN/BD sector.
+-> Decodes board-id to Mac model in log file.
+-> tells the user if the assigned FireWire address does not match the firmware MAC address.
+This may indicate that on an MP41 or MP51, firmware from another machine was flashed.
+
+test_nvram:
+-> Dumping IM121 is forced to use eficheck (available from High Sierra to Ventura) due to a crash when loading DirectHW.kext.
+-> "FW MAC matches not with LBSN" or "FW MAC matches with LBSN" line, when the Mac has Firewire and LBSN sector has a firmware MAC address.
+-> A catch when Eficheck is not available (before 10.13, after 13).
+-> A catch for an empty EFI version string.
+-> CRC32 check for the main firmware volumes for MP41 and MP51 firmwares.
+
+Macschrauber's System Version Scanner:
+-> more sealed status report.
+-> more progress bar steps for multiple MacOS on one machine.
+
+Select Wi-Fi from found networks and Select Wi-Fi from preferred networks:
+-> Message and workaround if Airport Utility cli tool is not working anymore on OS since Ventura.
+
+ESP Tools:
+-> Detect amdvbflash ESP.
+
+unmount all ESPs, Mount ESP from list, Mount ESP from list and show bootloader:
+-> Unmounting has an option to handle busy status of ESPs.
+
+copy ESP:
+-> Sets script into a loop, to work on more than one ESP in a row.
+
+Boot-Args:
+-> edit boot-args got into a loop, so editing more options is more comfortable.
+
+Preboot Fixer:
+-> mount ESP needs admin privileges if user is not in admin group, fixed when using stored admin / password data.
+
+
+
+
+
 Update from 1-9-2024
 
 The Dumper:
