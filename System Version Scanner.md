@@ -1,6 +1,6 @@
 ### System Version Scanner
 
-This tool presents Windows and MacOs versions it finds on the local disks, in this format:
+This tool presents Windows and MacOs versions, it finds on the local disks, in this format:
 
 Partition name: OS version (Windows BIOS/UEFI) - device name - @ position (interface type) - [Sealed: No/YES/Broken]
 
