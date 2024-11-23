@@ -1,19 +1,19 @@
 ### What is it?
 
-A tool for dumping (reading) and flashing (writing) the firmware of a Mac Pro 4,1 / 5,1 combined with an analyser of the NVRAM content and the firmware validity.
+A tool for dumping (reading) and flashing (writing) the firmware of a Mac Pro 4,1 / 5,1, combined with an analyser of the NVRAM content and the firmware validity.
 <br>
-Also it can dump and analyse firmwares from the most Macs from around 2006 to 2017.
+Also it can dump and analyse firmwares from the most Macs, from around 2006 to 2017.
 <br>
 
 ![1](https://github.com/Macschrauber/Macschrauber-s-Rom-Dump/blob/main/assets/img_Dumper/main%20dialog.png?raw)  
 
-It reads and writes to a ch341a USB programmer as well to work with desoldered flash chips. It detects a connected programmer and installs the libs to communicate with it. 
+It reads and writes to a ch341a USB programmer as well, to work with desoldered flash chips. It detects a connected programmer and installs the libs to communicate with it. 
   
-I added some tools around the Mac administration that I wrote and find useful. Check out the other .md files for them.  
+I added some tools around the Mac administration, that I wrote and find useful. Check out the other .md files for them.  
 
 <br>
 
-### example output of the Dumper (main GUI tool) with some problems
+### example output of the Dumper (main GUI tool) with some problems found
 ![1](https://github.com/Macschrauber/Macschrauber-s-Rom-Dump/blob/main/assets/img_Dumper/5a.%20analyses%20scrollable.png)  
 
 <br>
@@ -72,11 +72,11 @@ VSS1 (Formatted) (Healthy), found 45 variables (29 valid, 16 deleted)
 VSS2 (Formatted) (Healthy)  
 ```
 <br><br>
-### ==> I needed to encrypt the disk image as Gatekeeper flaggs it for containing Flashrom. <==  
+### ==> I needed to encrypt the disk image, as Gatekeeper flaggs it for containing Flashrom. <==  
 ### *The password is **rom**.*
 <br><br>
 
-If you encounter an error regarding an unknown developer when attempting to open the Dumper, macOS displays a message stating:  
+If you encounter an error, regarding an unknown developer, when attempting to open the Dumper, macOS displays a message stating:  
 ```macOS cannot verify the developer of``` 
   
 To allow the system to open the Dumper, perform a Ctrl-click on it and select open. 
@@ -104,7 +104,7 @@ They also can be flagged, if, do ```xattr -cr "/path/to/the.app"```
 
 <br>
 
-Use my Github Downloader to obtain a copy with no quarantine flag set:
+Use my Github Downloader, to obtain a copy with no quarantine flag set:
 <br>
 [https://github.com/Macschrauber/Macschrauber-s-Rom-Dump/releases/download/Release/Download.the.Dumper.from.github.zip](https://github.com/Macschrauber/Macschrauber-s-Rom-Dump/releases/download/Release/Download.the.Dumper.from.github.zip)
 <br>
@@ -137,7 +137,7 @@ for running RomDump Macschrauber csrutil enable --without kext is enough
 ———————————————————————————————————————————————
 ### Special thanks to:
 
-+ flashrom.org for the cli tool communicating with the Mac firmware chip.
++ flashrom.org for the cli tool, communicating with the Mac firmware chip.
 + tsialex @ Macrumors for investigating the Mac bootrom and sharing the information.  
 + Syncretic @ Macrumors for scanvss.  
 + LongSoft for UEFIExtract.  
