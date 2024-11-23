@@ -1,23 +1,23 @@
 # ESP Tools
 
-What ESP is blessed one can see when dumping the firmware with the Dumper.  
-The ESP Tools what show a list of ESPs mark them with a `*` as first character of the line.
+What ESP is blessed, one can see when dumping the firmware with the Dumper.  
+The ESP Tools that show a list of ESPs mark them with a `*` as first character of the line.
 
 
 
-To mount ESP Partitions one can use my ESP tools:
+To mount ESP partitions, one can use my ESP Tools:
   
 what's in?
 
 
 **`Copy ESP`:**
-- select source ESP from a list with bootloader flavor, drive's made, type, interface, physical position
+- select the source ESP from a list that includes bootloader flavor, drive make, type, interface, and physical position
 ![1](https://github.com/Macschrauber/Macschrauber-s-Rom-Dump/blob/main/assets/img_ESP_tools/1%20select%20source%20ESP.png)
-- select destination ESP from same list
+- select the destination ESP from same list
 ![2](https://github.com/Macschrauber/Macschrauber-s-Rom-Dump/blob/main/assets/img_ESP_tools/2%20select%20destination%20ESP.png)
 - it copies the ESP from source to destination, asks for confirmation, when destination ESP has a bootloader
 ![3](https://github.com/Macschrauber/Macschrauber-s-Rom-Dump/blob/main/assets/img_ESP_tools/3%20confirm%20to%20delete%20destination%20ESP.png)
-- also can copy to a folder for archiving. Folder name contains bootloader flavor and a time stamp
+- also it can copy to a folder for archiving. Folder name contains bootloader flavor and a time stamp
 - copies archived bootloaders back
 
 <br>
