@@ -1,7 +1,7 @@
 # ESP Tools
 
 What ESP is blessed, one can see when dumping the firmware with the Dumper.  
-The ESP Tools that show a list of ESPs mark them with a `*` as first character of the line.
+The ESP Tools that show a list of ESPs mark them with an asterisk `*` as first character of the line.
 
 
 
@@ -23,9 +23,9 @@ what's in?
 <br>
 
 **the tools for mounting the ESPs:**
-- ```Mount all ESPs```: just dumb mount all ESPs found on all volumes
+- ```Mount all ESPs```: just perform a simple mount all ESPs found on all volumes
 - ```Mount ESP from List```: shows a list with drive's made, type, interface, physical position
-- ```Mount ESP from List & show Bootloader```: same as mount ESP from list plus list the bootloader flavor
+- ```Mount ESP from List & show Bootloader```: same as ```Mount ESP from List``` plus list the bootloader flavor
 ![1](https://github.com/Macschrauber/Macschrauber-s-Rom-Dump/blob/main/assets/img_ESP_tools/Mount%20ESP%20from%20list%20(Readme%20&%20other%20tools%20-%20ESP%20tools).png)  
 
 This tool also can deselect the Uefi Windows bootloader, preventing direct booting without OpenCore protection. Important for
@@ -57,9 +57,9 @@ classic Mac Pro units with one active NVRAM stream.
 **for identifying the mounted ESPs:**
 - ```Tag all ESPs```: Places a null bytes file in the root of the ESP with drive's made, type, interface, physical position
 - ```Check ESPs for MS certificates```: It checks the ESPs for a bootloader containing Microsoft UEFI Windows certificates.  
-  Giving also the option to deselect Uefi Windows bootloader to prevent unprotected boot for machines what need that.  
-  It got an option for setup to live in the `login items`, to deactivate Windows ESPs for being unable to start without `OpenCore` or `Refind Plus` protection.
-  Also it scans the NVRAM streams for `Windows certificates` if csr values are set as needed.
+  Also giving the option to deselect the UEFI Windows bootloader, to prevent unprotected booting for machines that need it. 
+It has an option to reside in the login items to deactivate Windows ESPs, preventing them from starting without OpenCore or Refind Plus protection.
+Also it scans the NVRAM streams for `Windows certificates` if csr values are set as needed.
 
 
 ![1](https://github.com/Macschrauber/Macschrauber-s-Rom-Dump/blob/main/assets/img_ESP_tools/Check%20ESPs%20for%20MS%20certificates/3%20added.png)
