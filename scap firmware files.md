@@ -1,11 +1,11 @@
 # .scap files info displaying
 
-Since Version 19-4-2024 the Dumper displays basic info for firmware capsule .scap files.
+Since version 19-4-2024, the Dumper displays basic info for firmware capsule .scap files.
 
 <br>
 What are .scap files?   
 
-In summary, .scap files are proprietary firmware capsules used by Apple to securely package and distribute firmware updates for the low-level system components of Mac computers. Extracting and modifying them requires specialized knowledge and tools.
+In summary, .scap files are proprietary firmware capsules, used by Apple to securely package and distribute firmware updates for the low-level system components of Mac computers. Extracting and modifying them requires specialized knowledge and tools.
 
 <br>
 
@@ -13,7 +13,7 @@ In summary, .scap files are proprietary firmware capsules used by Apple to secur
 As some of these firmware files contain information in their header, the Dumper displays them, if possible.  
 <br>
 ![1](https://raw.githubusercontent.com/Macschrauber/Macschrauber-s-Rom-Dump/main/assets/img_Dumper/scap%20files%20readout.png)
-You can also rename them with `test_nvram filename.scap -rename` with the cli tool based on IBIOSI or EFI version.
+You can also rename them with `test_nvram filename.scap -rename`, with the cli tool, based on IBIOSI or EFI version.
 
 ```
 $ test_nvram /Users/user/temp/unnamed.scap -rename
