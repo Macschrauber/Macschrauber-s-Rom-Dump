@@ -2,9 +2,9 @@
 
 This tool presents Windows and MacOs versions, it finds on the local disks, in this format:
 
-Partition name: OS version (Windows BIOS/UEFI) - device name - @ position (interface type) - [Sealed: No/YES/Broken]
+Partition name: OS version (Windows BIOS/UEFI) - device name - @ position (interface type) - [Sealed: No/YES/Broken].
 
-a leading * will report the blessed OS (what is set as startup disk)
+A leading * will report the blessed OS (what is set as startup disk).
 
 
 
