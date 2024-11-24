@@ -67,7 +67,7 @@ ___________________
 4 fixed SystemVersion.plist:<br>
 ![4](https://github.com/Macschrauber/Macschrauber-s-Rom-Dump/blob/main/assets/img_Rename_and_repair_preboot/6%20fixed.png)
 ___________________  
-5 Ventura PlatformSupport_plist mismatch.png:<br>
+5 Ventura PlatformSupport.plist mismatch:<br>
 ![5](https://github.com/Macschrauber/Macschrauber-s-Rom-Dump/blob/main/assets/img_Rename_and_repair_preboot/7%20Ventura%20PlatformSupport_plist%20mismatch.png)
 ___________________  
 6 the report when the tool is done:<br>
@@ -97,14 +97,14 @@ ___________________
 ## The tool:
 
 
-```Preboot fixer and renamer``` checks all Preboot folders for matching SystemVersion / PlatformSupport plists and ```.im4``` files and asks for replacing them if they don't match.  
+```Preboot fixer and renamer``` checks all Preboot folders for matching SystemVersion / PlatformSupport plists and ```.im4``` files and asks for replacing them, if they don't match.  
 
 If it is started on an APFS1 OS (late versions of Sierra, High Sierra, Mojave), it cannot mount the APFS2 System volume to read the original plists.  
-However, it alarms if it finds High Sierra ```SystemVersion.plist``` files in APFS2 Preboots.  
+However, it alarms, if it finds High Sierra ```SystemVersion.plist``` files in APFS2 Preboots.  
 
-The wrong ```.contentDetails``` and the ```.disk_label*``` icon drawn by the native Apple boot picker can be rebuilt by the tool as well.  
+The wrong ```.contentDetails``` and the ```.disk_label*``` icon, drawn by the native Apple boot picker, can be rebuilt by the tool as well.  
 
-You can edit the names and icons with the tool as well, even with multiple lines by entering option-return for a new line.  
+You can edit the names and icons with the tool as well, even with multiple lines, by entering option-return for a new line.  
 This is the button <proceed with label editor>. Thanks to @joevt for all the help and providing the bash functions for it.  
 
 The names in the boot picker could be renamed by the preboot fixer and renamer tool.
@@ -116,7 +116,7 @@ The @joevt multiline names are ESPs, there is also a tool for renaming ESPs in t
 ## Maybe a possible exorcism:
 
 you can try to update the date of High Sierra's ```SystemVersion.plist```  
-This needs more testing but it seems it helps, preventing High Sierra from replacing files in newer System's Preboots.  
+This needs more testing, but it seems it helps, preventing High Sierra from replacing files in newer System's Preboots.  
 Boot High Sierra and do this in ```Terminal```  
 
 ```
@@ -132,9 +132,9 @@ APFS2: APFS Systems with a separated system and data volume
 
 <br>
 
-I placed the tools in my firmware dumper package to ease administration.
+I placed the tools in my firmware dumper package, to ease administration.
 They can be found in the ```Readme & other tools``` folder.  
-Using the Dumper to check and backup the bootrom is a good practice for all Macs, but that's another topic ;-)  
+Using the Dumper, to check and backup the bootrom is a good practice for all Macs, but that's another topic ;-)  
 
 
 <br>
