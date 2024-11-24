@@ -32,12 +32,14 @@ Also we found that it replaces 3 ```.im4``` files for Macs with T2 chip.
 
 ## The effect:
 
-The following example details is for a Mac Pro 5,1: A wrong ```PlatformSupport.plist``` file of High Sierra gives a **prohibited sign**, or in verbose mode, the message for an **unsupported board ID** of a Mac Pro 7,1 ```Mac-27AD2F918AE68F61``` if this machine is spoofed.  
+The following example details is for a Mac Pro 5,1: A wrong ```PlatformSupport.plist``` file of High Sierra gives a **prohibited sign**.
+<br>
+Or in verbose mode, the message for an **unsupported board ID** of a Mac Pro 7,1 ```Mac-27AD2F918AE68F61```, if this machine is spoofed.  
 And shuts down hard after 30 seconds.
 
 If we set the boot-arg ```-no_compat_check``` in OpenCore's ```config.plist```, the OS ignores these issues and boots.  
 
-A wrong ```SystemVersion.plist``` file of High Sierra gives a High Sierra icon in the OpenCore boot menu (which is just cosmetic) but could **prevent the OS from updating or installing** an OS reading the wrong High Sierra version 10.13.x.  
+A wrong ```SystemVersion.plist``` file of High Sierra gives a High Sierra icon in the OpenCore boot menu (which is just cosmetic), but could **prevent the OS from updating or installing** an OS, reading the wrong High Sierra version 10.13.x.  
 
 <br>
 
@@ -46,8 +48,8 @@ A wrong ```SystemVersion.plist``` file of High Sierra gives a High Sierra icon i
 Replacing ```SystemVersion.plist```, ```PlatformSupport.plist``` and the ```.im4``` files with the proper versions.  
 They are also stored in the CoreServices folder of the System volume and in the i386 folder of the Preboot volume.
 
-So we replace the Preboot files with the proper files, and the situation is fixed. 
-If the OS cannot boot anymore because of the missing Board ID (prohibition sign or Board ID message), we need to either boot another APFS2 capable OS, mount the System volume, and replace the files or add the boot-arg:  
+So, we replace the Preboot files with the proper files, and the situation is fixed. 
+If the OS cannot boot anymore, because of the missing Board ID (prohibition sign or Board ID message), we need to either boot another APFS2 capable OS, mount the System volume, and replace the files or add the boot-arg:  
 
 ```-no_compat_check``` to the OpenCore ```config.plist```.  
 
@@ -97,7 +99,7 @@ ___________________
 ## The tool:
 
 
-```Preboot fixer and renamer``` checks all Preboot folders for matching SystemVersion / PlatformSupport plists and ```.im4``` files and asks for replacing them, if they don't match.  
+```Preboot fixer and renamer``` checks all Preboot folders, for matching SystemVersion / PlatformSupport plists and ```.im4``` files and asks for replacing them, if they don't match.  
 
 If it is started on an APFS1 OS (late versions of Sierra, High Sierra, Mojave), it cannot mount the APFS2 System volume to read the original plists.  
 However, it alarms, if it finds High Sierra ```SystemVersion.plist``` files in APFS2 Preboots.  
