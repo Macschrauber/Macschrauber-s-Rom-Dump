@@ -23,7 +23,7 @@ what's in?
 <br>
 
 **the tools for mounting the ESPs:**
-- ```Mount all ESPs```: just perform a simple mount all ESPs found on all volumes
+- ```Mount all ESPs```: just perform a simple mount of all ESPs, found on all volumes
 - ```Mount ESP from List```: shows a list with drive's made, type, interface, physical position
 - ```Mount ESP from List & show Bootloader```: same as ```Mount ESP from List``` plus list the bootloader flavor
 ![1](https://github.com/Macschrauber/Macschrauber-s-Rom-Dump/blob/main/assets/img_ESP_tools/Mount%20ESP%20from%20list%20(Readme%20&%20other%20tools%20-%20ESP%20tools).png)  
@@ -55,7 +55,7 @@ classic Mac Pro units with one active NVRAM stream.
 <br>
 
 **for identifying the mounted ESPs:**
-- ```Tag all ESPs```: Places a null bytes file in the root of the ESP with drive's made, type, interface, physical position
+- ```Tag all ESPs```: Places a null bytes file in the root of the ESP, with drive's made, type, interface, physical position
 - ```Check ESPs for MS certificates```: It checks the ESPs for a bootloader containing Microsoft UEFI Windows certificates.  
   Also giving the option to deselect the UEFI Windows bootloader, to prevent unprotected booting for machines that need it. 
 It has an option to reside in the login items to deactivate Windows ESPs, preventing them from starting without OpenCore or Refind Plus protection.
@@ -74,7 +74,7 @@ Also it scans the NVRAM streams for `Windows certificates` if csr values are set
 
 **```Preboot fixer and renamer```:**
 - not exactly an ESP tool, this let you rename the Boot Picker entry for the OS. If your entries suddenly change to xyz - data you suffered from High Sierra overwriting Preboot volumes of newer OS.
-In OpenCore you will see a mismatched High Sierra *icon. This is due overwritten SystemVersion.plist. Also invalid board ID / the forbidden sign can happen.
+In OpenCore you will see a mismatched High Sierra *icon. This is due to overwritten SystemVersion.plist. Also invalid board ID / the forbidden sign can happen.
 
 This tool also repairs these issues.<br>
 Detailed information in:<br>
