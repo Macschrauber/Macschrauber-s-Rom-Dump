@@ -5,7 +5,7 @@ The Dumper:
 -> log firmware MAC address.
 -> log blessed OS, if not via OpenCore.
 -> report missing Fsys stream.
--> recognise Apple M cpus, ch341a reading and writing. Needs manual lib installation.
+-> recognise Apple M CPUs, ch341a reading and writing for M CPUs. Needs manual lib installation.
 
 Is damaged fix:
 -> added suggestions and adaptions to work in Sequoia.
