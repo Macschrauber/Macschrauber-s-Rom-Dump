@@ -35,6 +35,10 @@ Preboot Fixer:
 Wifi-Scripts:
 -> Select Wi-Fi from found networks displays current wifi network.
 
+AVX2:​
+-> new Tool to scan for AVX / AVX2 codes in binaries. Needs Command Line Tools.
+
+
 added icons for the tools, made by Chatgpt.
 
 
