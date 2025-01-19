@@ -1,3 +1,44 @@
+Update from 18-1-2025
+
+The Dumper:
+-> confirming twice if the user wants to flash a MP51 firmware on a MP41 with Nehalem processor.
+-> log firmware MAC address.
+-> log blessed OS, if not via OpenCore.
+-> report missing Fsys stream.
+-> recognise Apple M cpus, ch341a reading and writing. Needs manual lib installation.
+
+Is damaged fix:
+-> added suggestions and adaptions to work in Sequoia.
+
+test_nvram: 
+-> fixed MP51.88Z.0085.B00 was detected as MP51.88Z.0087.B00.
+-> compare Firewire MAC address just for fw0, for machine's that have multiple Firewire interfaces.
+-> '-vars 4D1ede05-38c7-4a6a-9cc6-4bcca8b38c14' for example, scans scan this GUID, only.
+-> added flashing to test_nvram, you should check the firmware file, before you flash. MP41 and MP51 units are tested, so far.
+
+Installer for CLI tools:
+-> present test_nvram versions from Dumper app and installed version.
+
+ESP Tools:
+-> fixes for Silicon Macs, as they have no ESP on the boot disk.
+-> fixes for ESPs on single partition disks.
+-> Copy ESP does unmount all mounted ESPs again.
+-> fixed: Memtest86 comes sometimes in ubuntu folder, so not detected.
+
+Check ESPs for MS bootloaders:
+-> fixed glitch: it does not deactivate Windows ESPs in 5 seconds dialog mode.
+-> fixed glitch: the variable os is not defined, when running in Yosemite and kext-dev.
+
+Preboot Fixer:
+-> Detect Apple M CPUs, there is no preboot / boot.efi.
+
+Wifi-Scripts:
+-> Select Wi-Fi from found networks displays current wifi network.
+
+added icons for the tools, made by Chatgpt.
+
+
+
 Update from 19-10-2024
 
 The Dumper:
