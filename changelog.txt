@@ -1,3 +1,13 @@
+Update from 25-1-2025
+
+The Dumper
+-> silent bug fix for v18-1-2024 as it had a false warning that the firmware MAC address does not match when containing 0x20
+
+All tools
+-> Dialog button was not centered in Catalina
+
+
+
 Update from 18-1-2025
 
 The Dumper:
