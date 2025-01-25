@@ -1,12 +1,17 @@
 ### AVX2 Scanner
 
+What is AVX/AVX2?
+<br>
+An enhaced command set what Xeon CPUs in Mac Pro 1,1 to 6,1 does not have. Mac OS newer than Monterey is compiled with AVX/AVX2 switched on. Also many Apps from that era, on. So knowing, if an App or component contains this code is useful.
+<br>
+
 It disassembles the executables and scans for `AVX/AVX2` command strings, it needs installing the `command line tools`.
 <br>
 <br>
 There will be a dialog, asking for this install, if you run the script the first time.
 <br>
 <br>
-Don't mind, if installing the tools will tell it takes an insane (days) amount of time, this is pretty normal and goes back to a an hour or so.
+Don't mind, if installing the tools will tell, it takes an insane (days) amount of time. This is pretty normal and goes back to a an hour or so.
 <br>
 <br>
 Tested with Massive X, `-c` argument is optional for counting the commands, what is much slower:
@@ -29,7 +34,7 @@ and run the bash script with (Preview as an example):
 <br>
 `~/Downloads/avx2 /System/Applications/Preview.app`
 <br>
-the script will need some time, as it disassembles a lot of code
+The script will need some time, as it disassembles a lot of code.
 <br>
 <br>
 <br>
