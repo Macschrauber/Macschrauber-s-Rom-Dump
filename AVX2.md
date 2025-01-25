@@ -5,7 +5,7 @@ What is AVX/AVX2?
 An enhaced command set what Xeon CPUs in Mac Pro 1,1 to 6,1 does not have. Mac OS newer than Monterey is compiled with AVX/AVX2 switched on. Also many Apps from that era, on. So knowing, if an App or component contains this code is useful.
 <br>
 
-It disassembles the executables and scans for `AVX/AVX2` command strings, it needs installing the `command line tools`.
+The tool disassembles the executables and scans for `AVX/AVX2` command strings, it needs installing the `command line tools`.
 <br>
 <br>
 There will be a dialog, asking for this install, if you run the script the first time.
