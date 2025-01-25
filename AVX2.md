@@ -34,12 +34,8 @@ the script will need some time, as it disassembles a lot of code
 <br>
 Also the same bash script, wrapped in a simple AppleScript, for those who prefer a GUI to select what to scan.
 <br>
+![Screenshot](https://github.com/Macschrauber/Macschrauber-s-Rom-Dump/blob/main/assets/img_avx2/AVX2%20GUI%201%20select%20type.png)
+![Screenshot](https://github.com/Macschrauber/Macschrauber-s-Rom-Dump/blob/main/assets/img_avx2/AVX2%20GUI%202%20select%20app.png)
+![Screenshot](https://github.com/Macschrauber/Macschrauber-s-Rom-Dump/blob/main/assets/img_avx2/AVX2%20GUI%203%20terminal.png)
 
 
-
-
-
-
-
-
-![Screenshot](https://github.com/Macschrauber/Macschrauber-s-Rom-Dump/blob/main/assets/img_System%20Version%20Scanner/Various%20OS.png)
