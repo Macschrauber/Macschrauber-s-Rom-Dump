@@ -22,6 +22,7 @@ AVX and AVX2 code found.`
 If copied to `/Downloads`, prepare the bash script:
 <br>
 `xattr -c ~/Downloads/avx2`
+<br>
 `chmod +x ~/Downloads/avx2`
 <br>
 and run the bash script with (Preview as an example):
