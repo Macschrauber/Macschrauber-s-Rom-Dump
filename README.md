@@ -153,7 +153,7 @@ for running RomDump Macschrauber csrutil enable --without kext is enough
   
 ### If you require assistance with a damaged boot rom, feel free to contact me in English or German at ```macschrauber@gmx.de```
 ### Also I can upgrade Mac Pro 4,1 (2009) firmwares properly to Mac Pro 5,1 (2010-2012).
-### As well as upgrading the firmware of an Xserve 3,1 to Mac Pro 5,1 with keeping the Xserve board and system serials
+### As well as upgrading the firmware of Xserve 3,1 to Mac Pro 5,1 with keeping the Xserve board and system serials
 (The Netkas tool or the underlying processes don't work anymore.)
 <br><br>
 
