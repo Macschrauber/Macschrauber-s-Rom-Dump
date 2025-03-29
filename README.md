@@ -1,6 +1,6 @@
 ### What is it?
 
-A tool for dumping (reading) and flashing (writing) the firmware of a Mac Pro 4,1 / 5,1, combined with an analyser of the NVRAM content and the firmware validity.
+A tool for dumping (reading) and flashing (writing) the firmware of a Mac Pro 4,1 / 5,1 and Xserve 3,1, combined with an analyser of the NVRAM content and the firmware validity.
 <br>
 Also it can dump and analyse firmwares from the most Macs, from around 2006 to 2017.
 <br>
@@ -153,6 +153,7 @@ for running RomDump Macschrauber csrutil enable --without kext is enough
   
 ### If you require assistance with a damaged boot rom, feel free to contact me in English or German at ```macschrauber@gmx.de```
 ### Also I can upgrade Mac Pro 4,1 (2009) firmwares properly to Mac Pro 5,1 (2010-2012).
+### As well as upgrading the firmware of an Xserve 3,1 to Mac Pro 5,1 with keeping the Xserve board and system serials
 (The Netkas tool or the underlying processes don't work anymore.)
 <br><br>
 
