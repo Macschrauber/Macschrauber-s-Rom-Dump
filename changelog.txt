@@ -1,3 +1,17 @@
+Update from 29-3-2025
+
+The Dumper:
+-> fixed: Big Button was not in the middle in Catalina.
+-> fixed: Give a note, if DirectHW.kext is not loaded due to Bitdefender, or alike.
+-> fixed: Xserve 3,1 flashing gave a missing "chips" variable error.
+-> added: Xserve 3,1 recognition, if no serial is in the firmware.
+
+test_nvram: 
+-> fixed NVRAM firmware rom string had a space for 0x20 and 0x00 for one user, fixed reading MAC address.
+-> multibyte error in some localisations presented in Monterey for hexdump vars and lbsn.
+
+
+
 Update from 25-1-2025
 
 The Dumper
