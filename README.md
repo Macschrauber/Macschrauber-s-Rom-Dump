@@ -4,6 +4,7 @@ You may need to approve the downloader in `Privacy & Security` of `System Settin
 <br>
 [https://github.com/Macschrauber/Macschrauber-s-Rom-Dump/releases/download/Release/Download.the.Dumper.from.github.zip](https://github.com/Macschrauber/Macschrauber-s-Rom-Dump/releases/download/Release/Download.the.Dumper.from.github.zip)
 <br>
+At the bottom of the site are some more options to download and start the downloader.
 
 ### What is it?
 
@@ -118,6 +119,10 @@ Use my Github Downloader, to obtain a copy with no quarantine flag set:
 You may need to right-click on the App and select open.
 <br><br>
 Or, if you want to use an older version, use the downloader button `I have the .DMG file`. This unflags the .DMG by copying it to the user's Download folder and let the downloader remove the quarantine flags.
+<br><br>
+Another method, past this directly in `Terminal`, this directly download and start the downloader:
+<br>
+```curl -L -o "$HOME/Downloads/Download the Dumper from Github.zip" https://github.com/Macschrauber/Macschrauber-s-Rom-Dump/releases/download/Release/Download.the.Dumper.from.github.zip && unzip "$HOME/Downloads/Download the Dumper from Github.zip" -d "$HOME/Downloads"  && open -a "$HOME/Downloads/Download the Dumper from Github.app"```
 
 
 <br><br>
