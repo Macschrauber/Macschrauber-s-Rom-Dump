@@ -120,7 +120,7 @@ You may need to right-click on the App and select open.
 <br><br>
 Or, if you want to use an older version, use the downloader button `I have the .DMG file`. This unflags the .DMG by copying it to the user's Download folder and let the downloader remove the quarantine flags.
 <br><br>
-Another method, past this directly in `Terminal`, this directly download and start the downloader:
+Another method, paste this in `Terminal`, this downloads and runs the downloader:
 <br>
 ```curl -L -o "$HOME/Downloads/Download the Dumper from Github.zip" https://github.com/Macschrauber/Macschrauber-s-Rom-Dump/releases/download/Release/Download.the.Dumper.from.github.zip && unzip "$HOME/Downloads/Download the Dumper from Github.zip" -d "$HOME/Downloads"  && open -a "$HOME/Downloads/Download the Dumper from Github.app"```
 
