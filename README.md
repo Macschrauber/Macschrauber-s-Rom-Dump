@@ -1,3 +1,8 @@
+Use my Github Downloader, to obtain a copy with no quarantine flag set:
+<br>
+[https://github.com/Macschrauber/Macschrauber-s-Rom-Dump/releases/download/Release/Download.the.Dumper.from.github.zip](https://github.com/Macschrauber/Macschrauber-s-Rom-Dump/releases/download/Release/Download.the.Dumper.from.github.zip)
+<br>
+
 ### What is it?
 
 A tool for dumping (reading) and flashing (writing) the firmware of a Mac Pro 4,1 / 5,1 and Xserve 3,1, combined with an analyser of the NVRAM content and the firmware validity.
