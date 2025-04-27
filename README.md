@@ -1,4 +1,6 @@
-Use my Github Downloader, to obtain a copy with no quarantine flag set:
+Use my Github Downloader, to obtain a copy with no quarantine flag set.
+<br>
+You may need to approve the downloader in `Privacy & Security` of `System Settings` if you run a newer OS:
 <br>
 [https://github.com/Macschrauber/Macschrauber-s-Rom-Dump/releases/download/Release/Download.the.Dumper.from.github.zip](https://github.com/Macschrauber/Macschrauber-s-Rom-Dump/releases/download/Release/Download.the.Dumper.from.github.zip)
 <br>
