@@ -6,8 +6,9 @@ You may need to approve the downloader in `Privacy & Security` of `System Settin
 <br>
 You will find a folder `Downloader` in your Downloads folder.
 <br>
-At the bottom of the site are some more options to download and start the downloader.
-
+<br>
+If you get a message, that `Downloader` is damaged, do in Terminal:
+```xattr -cr "$HOME/Downloads/Downloader/"```
 ### What is it?
 
 A tool for dumping (reading) and flashing (writing) the firmware of a Mac Pro 4,1 / 5,1 and Xserve 3,1, combined with an analyser of the NVRAM content and the firmware validity.
