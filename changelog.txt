@@ -1,3 +1,35 @@
+Update from 14-6-2025
+
+The Dumper:
+-> added: logging of the GPU's Device ID
+-> added: error handling for cases where the user’s home folder is on a disk that does not allow setting privileges
+-> added: DefaultBackgroundColor for type 80 firmware (with 2 alternating streams)
+
+-> fixed: firmware MAC mismatch report, when the NVRAM variable had a backslash in its encoding
+
+All tools:
+-> finally got a fix for error -1750 when the tools quit, happened on OS 10.9 and earlier
+
+ESP Tools:
+-> fixed: issues when an ESP's name does not start with "ESP", like "No Name", or whatever
+-> added: ability to read BootOrder directly from the firmware chip when BootOrder is masked by OpenCore (LauncherOption=Full, ESP self-blessing).
+
+This functionality is available via Scanvss, Eficheck, or the Dumper’s `test_nvram` CLI tool, depending on the capabilities of the unit, OS, and CSR settings. To read the firmware chip, you need to install the CLI helper tools.
+
+
+
+Preboot Fixer:
+-> fixed: sandbox permissions issue on Sequoia / Silicon when editing disk labels on external Intel disks
+
+CPU Frequency:
+-> measures actual CPU frequency, including under load to force turbo mode
+
+Downloader:
+-> fixed: addressed an install loop that occurred when a user downloaded the Dumper and then launched the downloader again from the disk image. Improved disk image recognition for robustness.
+-> changed: now uses a single downloader for all three sources (GitHub, Dropbox, GMX)
+
+
+
 Update from 29-3-2025
 
 The Dumper:
