@@ -8,6 +8,7 @@ You will find a folder `Downloader` in your Downloads folder.
 <br>
 <br>
 If you get a message, that `Downloader` is damaged, do in Terminal:
+<br>
 ```xattr -cr "$HOME/Downloads/Downloader/"```
 ### What is it?
 
