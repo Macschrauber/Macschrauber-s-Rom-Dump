@@ -124,7 +124,7 @@ Or, if you want to use an older version, use the downloader button `I have the .
 <br><br>
 Another method, paste this in `Terminal`, this downloads and runs the downloader:
 <br>
-```curl -L -o "$HOME/Downloads/Download the Dumper from Github.zip" https://github.com/Macschrauber/Macschrauber-s-Rom-Dump/releases/download/Release/Download.the.Dumper.from.github.zip && unzip -o "$HOME/Downloads/Download the Dumper from Github.zip" -d "$HOME/Downloads"  && open -a "$HOME/Downloads/Download the Dumper from Github.app"```
+```curl -L -o "$HOME/Downloads/Download the Dumper from Github.zip" https://github.com/Macschrauber/Macschrauber-s-Rom-Dump/releases/download/Release/Download.the.Dumper.from.github.zip && unzip -o "$HOME/Downloads/Download the Dumper from Github.zip" -d "$HOME/Downloads"  && open -a "$HOME/Downloads/Downloader/Download the Dumper.app"```
 
 
 <br><br>
