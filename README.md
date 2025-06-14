@@ -4,6 +4,8 @@ You may need to approve the downloader in `Privacy & Security` of `System Settin
 <br>
 [https://github.com/Macschrauber/Macschrauber-s-Rom-Dump/releases/download/Release/Download.the.Dumper.from.github.zip](https://github.com/Macschrauber/Macschrauber-s-Rom-Dump/releases/download/Release/Download.the.Dumper.from.github.zip)
 <br>
+You will find a folder `Downloader` in your Downloads folder.
+<br>
 At the bottom of the site are some more options to download and start the downloader.
 
 ### What is it?
